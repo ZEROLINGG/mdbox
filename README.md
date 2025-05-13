@@ -1,4 +1,4 @@
-# ZEROLINGG/mdbox - 多领域知识库笔记
+# mdbox - 多领域知识库笔记
 
 ## 介绍
 
