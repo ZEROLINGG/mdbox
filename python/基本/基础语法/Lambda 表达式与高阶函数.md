@@ -128,7 +128,7 @@ for s in sorted_students:
 
 **输出：**
 
-```python
+```
 Bob 95  
 Alice 88  
 Charlie 70
