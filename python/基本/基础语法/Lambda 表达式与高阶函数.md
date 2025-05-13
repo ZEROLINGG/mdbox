@@ -12,20 +12,20 @@ Lambda 是 Python 提供的一种**匿名函数**的语法形式，也称为 Lam
 
 ### 2. 基本语法
 
-```
+```python
 lambda 参数1, 参数2, ... : 表达式
 ```
 
 等价于：
 
-```
+```python
 def 函数名(参数1, 参数2, ...):
     return 表达式
 ```
 
 ### 3. 示例
 
-```
+```python
 # 普通函数
 def add(x, y):
     return x + y
@@ -68,7 +68,7 @@ Python 中常用的高阶函数包括：
 
 对可迭代对象的每个元素执行 `func` 操作，并返回一个新的迭代器。
 
-```
+```python
 nums = [1, 2, 3, 4]
 squared = list(map(lambda x: x**2, nums))
 print(squared)  # 输出 [1, 4, 9, 16]
@@ -78,7 +78,7 @@ print(squared)  # 输出 [1, 4, 9, 16]
 
 对可迭代对象进行过滤，仅保留 `func` 返回 `True` 的元素。
 
-```
+```python
 nums = [1, 2, 3, 4, 5]
 even = list(filter(lambda x: x % 2 == 0, nums))
 print(even)  # 输出 [2, 4]
@@ -88,7 +88,7 @@ print(even)  # 输出 [2, 4]
 
 对 `iterable` 中的元素进行累积操作。使用前需导入 `functools` 模块。
 
-```
+```python
 from functools import reduce
 
 nums = [1, 2, 3, 4]
@@ -100,7 +100,7 @@ print(product)  # 输出 24（即 1*2*3*4）
 
 对序列进行排序。可通过 `key` 指定排序依据，通过 `reverse` 指定是否反转排序结果。
 
-```
+```python
 data = ['abc', 'a', 'abcd']
 sorted_data = sorted(data, key=lambda x: len(x))
 print(sorted_data)  # 输出 ['a', 'abc', 'abcd']
@@ -112,7 +112,7 @@ print(sorted_data)  # 输出 ['a', 'abc', 'abcd']
 
 以下示例展示了如何结合使用 Lambda 表达式与高阶函数来进行数据排序：
 
-```
+```python
 students = [
     {'name': 'Alice', 'score': 88},
     {'name': 'Bob', 'score': 95},
@@ -128,7 +128,7 @@ for s in sorted_students:
 
 **输出：**
 
-```
+```python
 Bob 95  
 Alice 88  
 Charlie 70
