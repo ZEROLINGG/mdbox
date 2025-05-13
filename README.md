@@ -9,8 +9,7 @@
 - **编程语言**: Python、Java、C/C++、汇编
 - **网络安全**: Web 安全、KALI、CTF 题解
 - **脚本语言**: PowerShell、VBScript、JavaScript
-- **数据库**: MySQL、其他数据库相关知识
-
+- **数据库**: MySQL、SQLite
 ## 协作指导
 
 ### 如何参与
