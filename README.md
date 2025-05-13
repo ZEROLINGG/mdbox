@@ -103,7 +103,7 @@
 ### 其他资源
 
 - **Obsidian**: 本仓库中的笔记适合使用 [Obsidian](https://obsidian.md/) 打开，以便获得最佳的浏览体验和图谱功能。
-- **Markdown 语法**: 如果你不熟悉 Markdown 格式，可以参考 [Markdown 官方文档](https://www.markdownguide.org/) 进行学习。
+- **Markdown 语法**: 如果你不熟悉 Markdown 格式，可以参考 [Markdown 官方文档](https://www.markdownguide.org/) 和[Markdown 菜鸟教程](https://www.runoob.com/markdown/md-title.html)进行学习。
 
 ## 贡献者
 
