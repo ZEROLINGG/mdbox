@@ -22,16 +22,16 @@
 2. **克隆仓库到本地**:
    - 通过 Git 将仓库克隆到你本地的计算机，以便进行更改：
      ```bash
-     git clone https://github.com/YOUR_USERNAME/mdbox.git
+     git clone https://github.com/ZEROLINGG/mdbox.git
      ```
-   - 替换 `YOUR_USERNAME` 为你 GitHub 的用户名。
+   
 
 3. **创建新分支**:
-   - 在进行修改之前，请始终创建一个新的分支以避免直接修改主分支。分支名称应简洁且有描述性。
+   - 在进行修改之前，你可以选择创建一个新的分支以避免直接修改主分支。分支名称应简洁且有描述性。
      ```bash
-     git checkout -b my-new-feature
+     git checkout -b one
      ```
-   - `my-new-feature` 替换为你要进行的修改或新增功能的名称。
+   - one 替换为你要进行的修改或新增功能的名称。
 
 4. **编辑文档**:
    - 使用你熟悉的编辑器（如 **Obsidian** 或 **Visual Studio Code**）打开 `.md` 文件进行修改。可以在各个分类下添加新的内容、更新现有文档或修正拼写错误。
@@ -41,19 +41,19 @@
    - 在本地提交你的更改时，确保提交信息简洁明了，并准确描述修改内容。遵循 [Commit Message Convention](https://www.conventionalcommits.org/) 规范：
      ```bash
      git add .
-     git commit -m "添加 Python 基础知识部分"
+     git commit -m "添加了新的知识"
      ```
 
 6. **推送更改**:
    - 将修改推送到 GitHub 仓库中：
      ```bash
-     git push origin my-new-feature
+     git push -u origin main
      ```
    - 推送后，你可以在 GitHub 仓库中看到你的修改已上传。
 
 7. **提交 Pull Request**:
    - 在 GitHub 上打开你的仓库，点击 **Pull Requests**，然后点击 **New Pull Request**。
-   - 选择你刚才创建的分支和主仓库的 `main` 分支进行对比。
+   - 选择你刚才创建的分支（如果创建了）和主仓库的 `main` 分支进行对比。
    - 在提交 Pull Request 时，确保说明清楚你所做的更改和修改的目的。例如：
      ```
      添加 Python 基础知识部分，并更新了部分格式。
@@ -61,7 +61,7 @@
      ```
 
 8. **审查与合并**:
-   - 作为项目维护者，我会定期审查 Pull Request。在合并之前，确保所有修改通过了检查并且没有引入任何不一致的格式或错误。
+   - 项目维护者定期审查 Pull Request。在合并之前，确保所有修改通过了检查并且没有引入任何不一致的格式或错误。
    - 如果有任何问题或需要改进的地方，会要求修改并重新提交。
 
 ### 协作规则与最佳实践
