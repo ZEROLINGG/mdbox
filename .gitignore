@@ -1,0 +1,35 @@
+# 忽略 .git 目录
+.git/
+
+# 忽略 .obsidian 目录
+.obsidian/
+
+# 忽略操作系统生成的文件
+.DS_Store        # macOS
+Thumbs.db        # Windows
+
+# 忽略编辑器和IDE生成的文件
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# 忽略 Python 虚拟环境目录
+venv/
+env/
+.venv/
+.venv1/
+.venv2/
+.env/
+
+# 忽略日志文件
+*.log
+
+# 忽略临时文件
+*.tmp
+*.swp
+*.swo
+*~
+
