@@ -16,15 +16,15 @@
 
 ## 二、常见实现类对比
 
-|   |   |
-|---|---|
-|实现类|特点|
-|`HashMap`|无序，键值允许 `null`<br><br>，非线程安全，性能高。|
-|`LinkedHashMap`|保持插入顺序，适合需要顺序访问的场景。|
-|`TreeMap`|自动按键排序（自然顺序或自定义排序），基于红黑树。|
-|`Hashtable`|线程安全，古老实现，不推荐使用。|
-|`ConcurrentHashMap`|高性能并发 Map，线程安全，适合多线程环境。|
-|`EnumMap`|专为枚举类型键设计，效率极高。|
+|                     |                                   |
+| ------------------- | --------------------------------- |
+| 实现类                 | 特点                                |
+| `HashMap`           | 无序，键值允许 `null`<br><br>，非线程安全，性能高。 |
+| `LinkedHashMap`     | 保持插入顺序，适合需要顺序访问的场景。               |
+| `TreeMap`           | 自动按键排序（自然顺序或自定义排序），基于红黑树。         |
+| `Hashtable`         | 线程安全，古老实现，不推荐使用。                  |
+| `ConcurrentHashMap` | 高性能并发 Map，线程安全，适合多线程环境。           |
+| `EnumMap`           | 专为枚举类型键设计，效率极高。                   |
 
 ---
 
@@ -143,7 +143,7 @@ Bob: 90
 
 ---
 
-## 七、适用场景建议
+## 七、TreeMap
 
 |           |                     |
 | --------- | ------------------- |
@@ -153,3 +153,142 @@ Bob: 90
 | 需要键排序     | `TreeMap`           |
 | 多线程安全     | `ConcurrentHashMap` |
 | 键为枚举类型    | `EnumMap`           |
+
+## ✅ 一、什么是 `TreeMap`？
+
+`TreeMap` 是 Java 集合框架中的一种基于**红黑树（Red-Black Tree）****实现的****有序映射表（Map）**。它实现了 `NavigableMap` 接口，并保证键值对按照**键的自然顺序**（或指定的比较器）进行排序。
+
+---
+
+## ✅ 二、`TreeMap` 的主要特点
+
+|   |   |
+|---|---|
+|特性|说明|
+|有序性|自动按照键进行**升序排序**（默认按自然顺序排序）|
+|基于红黑树|内部使用红黑树结构，保证查找/插入/删除的时间复杂度为 `O(log n)`|
+|不允许 `null`<br><br>键|与 `HashMap`<br><br>不同，`TreeMap`<br><br>中键不能为空；值可以为 `null`|
+|线程不安全|如果用于多线程环境，需手动同步或使用 `Collections.synchronizedMap()`|
+|可自定义排序|可通过构造方法传入 `Comparator`<br><br>来自定义排序规则|
+
+---
+
+## ✅ 三、基本语法与构造方法
+
+```Java
+TreeMap<K, V> map = new TreeMap<>();
+TreeMap<K, V> map = new TreeMap<>(Comparator<? super K> comparator); // 自定义排序
+TreeMap<K, V> map = new TreeMap<>(Map<? extends K, ? extends V> m); // 从其他Map复制
+```
+
+---
+
+## ✅ 四、常用方法
+
+|   |   |
+|---|---|
+|方法|功能说明|
+|`put(K key, V value)`|添加键值对|
+|`get(Object key)`|获取指定键的值|
+|`remove(Object key)`|删除指定键|
+|`firstKey()`|获取最小的键|
+|`lastKey()`|获取最大的键|
+|`ceilingKey(K key)`|≥ 指定键的最小键|
+|`floorKey(K key)`|≤ 指定键的最大键|
+|`higherKey(K key)`|> 指定键的最小键|
+|`lowerKey(K key)`|< 指定键的最大键|
+|`subMap(K fromKey, K toKey)`|获取部分视图（[fromKey, toKey)）|
+|`descendingMap()`|返回逆序视图|
+
+---
+
+## ✅ 五、使用示例
+
+### 1. 基本使用：自动按键排序
+
+```Java
+import java.util.*;
+
+public class TreeMapExample {
+    public static void main(String[] args) {
+        TreeMap<Integer, String> map = new TreeMap<>();
+
+        map.put(3, "C");
+        map.put(1, "A");
+        map.put(2, "B");
+        map.put(4, "D");
+
+        System.out.println("TreeMap 自动按 key 升序排序：");
+        for (Map.Entry<Integer, String> entry : map.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        }
+    }
+}
+```
+
+### 2. 使用自定义排序（字符串按降序）
+
+```Java
+import java.util.*;
+
+public class TreeMapCustomSort {
+    public static void main(String[] args) {
+        TreeMap<String, Integer> map = new TreeMap<>(Comparator.reverseOrder());
+
+        map.put("Banana", 2);
+        map.put("Apple", 5);
+        map.put("Mango", 3);
+
+        System.out.println("TreeMap 按字符串 key 降序排序：");
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " => " + entry.getValue());
+        }
+    }
+}
+```
+
+### 3. 应用：统计并按分数排序（学生成绩）
+
+```Java
+import java.util.*;
+
+public class StudentScores {
+    public static void main(String[] args) {
+        TreeMap<Integer, String> scores = new TreeMap<>();
+
+        scores.put(85, "Alice");
+        scores.put(92, "Bob");
+        scores.put(75, "Charlie");
+        scores.put(90, "Diana");
+
+        System.out.println("按分数升序输出学生成绩：");
+        for (Map.Entry<Integer, String> entry : scores.entrySet()) {
+            System.out.println("分数: " + entry.getKey() + ", 学生: " + entry.getValue());
+        }
+    }
+}
+```
+
+---
+
+## ✅ 六、`TreeMap` 与其他 Map 的对比
+
+|        |                   |                 |              |
+| ------ | ----------------- | --------------- | ------------ |
+| 特性     | `HashMap`         | `LinkedHashMap` | `TreeMap`    |
+| 是否有序   | 否                 | 插入顺序            | **按键排序（有序）** |
+| 基本结构   | 哈希表               | 哈希表 + 链表        | 红黑树          |
+| 空键是否允许 | **允许 1 个 null 键** | 允许              | ❌ 不允许 null 键 |
+| 性能     | 查询性能最高            | 查询快且有顺序         | 有序但性能略低      |
+| 应用场景   | 快速查找              | 保留插入顺序          | 需要**自动排序**时  |
+
+---
+
+## ✅ 七、适用场景总结
+
+|                       |                 |
+| --------------------- | --------------- |
+| 场景                    | 建议使用            |
+| 快速查找、不关心顺序            | `HashMap`       |
+| 保留插入顺序                | `LinkedHashMap` |
+| **自动排序、范围查询、按键范围统计等** | ✅ `TreeMap`     |
