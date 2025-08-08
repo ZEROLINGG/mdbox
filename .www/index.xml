@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>Quartz 4</title>
+      <link>https://quartz.jzhao.xyz</link>
+      <description>Last 10 notes on Quartz 4</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>index</title>
+    <link>https://quartz.jzhao.xyz/python/2.%E5%B8%B8%E7%94%A8%E5%BA%93%E4%B8%8E%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/</link>
+    <guid>https://quartz.jzhao.xyz/python/2.%E5%B8%B8%E7%94%A8%E5%BA%93%E4%B8%8E%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Fri, 08 Aug 2025 08:39:19 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://quartz.jzhao.xyz/python/2.%E5%B8%B8%E7%94%A8%E5%BA%93%E4%B8%8E%E5%B7%A5%E5%85%B7/</link>
+    <guid>https://quartz.jzhao.xyz/python/2.%E5%B8%B8%E7%94%A8%E5%BA%93%E4%B8%8E%E5%B7%A5%E5%85%B7/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Fri, 08 Aug 2025 08:39:19 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://quartz.jzhao.xyz/</link>
+    <guid>https://quartz.jzhao.xyz/</guid>
+    <description><![CDATA[ mdbox - 多领域知识库笔记 介绍 欢迎来到 mdbox 知识库！本仓库用于整理和归档多个技术方向的学习笔记，涵盖编程语言、网络安全、CTF、数据库等主题。所有内容都以 Markdown 形式编写，并适配 Obsidian 使用。 主要分类 编程语言: Python、Java、C/C++、汇编 网络安全: Web 安全、KALI、CTF 题解 脚本语言: PowerShell、VBScript、JavaScript 数据库: MySQL、SQLite 协作指导 如何参与 Fork 仓库: 点击右上角的 Fork 按钮，创建仓库的副本到你自己的 GitHub 账户中。 在你的 GitHub ... ]]></description>
+    <pubDate>Fri, 08 Aug 2025 08:11:56 GMT</pubDate>
+  </item><item>
+    <title>运算符与表达式</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%A1%A8%E8%BE%BE%E5%BC%8F</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%A1%A8%E8%BE%BE%E5%BC%8F</guid>
+    <description><![CDATA[ 本文将分为以下几个部分： 基础概念：什么是运算符、操作数和表达式。 运算符分类详解：按功能对 C++ 所有主要运算符进行分类讲解。 运算符的关键属性：优先级（Precedence）和结合性（Associativity）。 表达式：表达式的求值、类型和值类别（左值/右值）。 综合示例与最佳实践。 1. ]]></description>
+    <pubDate>Fri, 08 Aug 2025 08:11:56 GMT</pubDate>
+  </item><item>
+    <title>概览</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%A6%82%E8%A7%88</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%A6%82%E8%A7%88</guid>
+    <description><![CDATA[ C++ 系统学习目录 一、基础入门 1. C++概述与环境搭建 C++的历史与特点 编译器安装（GCC、Clang、MSVC） IDE选择与配置 第一个C++程序 编译与链接过程 2. ]]></description>
+    <pubDate>Tue, 05 Aug 2025 23:44:52 GMT</pubDate>
+  </item><item>
+    <title>文档格式</title>
+    <link>https://quartz.jzhao.xyz/%E5%85%B6%E4%BB%96/%E6%96%87%E6%A1%A3%E6%A0%BC%E5%BC%8F</link>
+    <guid>https://quartz.jzhao.xyz/%E5%85%B6%E4%BB%96/%E6%96%87%E6%A1%A3%E6%A0%BC%E5%BC%8F</guid>
+    <description><![CDATA[ 使用全角竖线｜可防止破坏表格渲染 ｜. ]]></description>
+    <pubDate>Tue, 05 Aug 2025 23:44:52 GMT</pubDate>
+  </item><item>
+    <title>变量声明与初始化</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%88%9D%E5%A7%8B%E5%8C%96</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%88%9D%E5%A7%8B%E5%8C%96</guid>
+    <description><![CDATA[ 一、变量声明 变量声明就是告诉编译器你要使用一个什么类型的变量，并为它分配内存空间。声明变量的基本语法如下： 类型 变量名; 示例： int age; double price; char grade; 此时，age 是一个整型变量，price 是一个双精度浮点型变量，grade 是一个字符型变量。 二、变量初始化 变量初始化就是在声明变量的同时给它赋一个初始值。初始化可以在声明时进行，也可以在声明后赋值。 1. ]]></description>
+    <pubDate>Tue, 05 Aug 2025 23:44:52 GMT</pubDate>
+  </item><item>
+    <title>基本语法规范</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83</guid>
+    <description><![CDATA[ 基本语法规范详细讲解 1. ]]></description>
+    <pubDate>Tue, 05 Aug 2025 23:44:52 GMT</pubDate>
+  </item><item>
+    <title>常量与字面量</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%AD%97%E9%9D%A2%E9%87%8F</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%AD%97%E9%9D%A2%E9%87%8F</guid>
+    <description><![CDATA[ 这两个概念紧密相关，但有着本质的区别。简单来说： 字面量 (Literal)：是源代码中直接表示一个固定值的符号。它是“值”本身。例如 123, 3.14, &#039;A&#039;, &quot;hello&quot;。 常量 (Constant)：是一个有名字的、其值在初始化后不能被改变的变量。它像一个贴了标签的、内容不可更改的盒子。例如 const int MAX_SIZE = 100;。 下面我们分两大部分来详细剖析。 第一部分：字面量 (Literals) 字面量是 C++ 语言中最基本的元素之一，它们是值的直接表示形式，不需要计算。 1. ]]></description>
+    <pubDate>Tue, 05 Aug 2025 23:44:52 GMT</pubDate>
+  </item><item>
+    <title>引用与指针</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%BC%95%E7%94%A8%E4%B8%8E%E6%8C%87%E9%92%88</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%BC%95%E7%94%A8%E4%B8%8E%E6%8C%87%E9%92%88</guid>
+    <description><![CDATA[ C++ 引用与指针详解 在 C++ 中，指针 (Pointer) 和 引用 (Reference) 都提供了间接访问其他变量的能力。然而，它们在底层概念、语法和使用方式上有着本质的区别。理解这些区别对于编写安全、高效的 C++ 代码至关重要。 一个简单的比喻： 指针 就像一张写有朋友家庭住址的便签。你可以通过这张便签找到朋友的家，也可以擦掉这个地址，写上另一个地址，或者这张便签上什么都不写（空指针）。 引用 就像一个人的“绰号”或“别名”。绰号就是这个人本身，它不是一个独立的东西，一旦起了绰号，它就一直代表这个人，不能再用作别人的绰号。 一、 指针 (Pointer) 1. ]]></description>
+    <pubDate>Tue, 05 Aug 2025 23:44:52 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
