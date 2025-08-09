@@ -6,65 +6,65 @@
       <description>Last 10 notes on Quartz 4</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>函数指针</title>
-    <link>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88</guid>
-    <description><![CDATA[ C++ 中的函数指针（Function Pointers）是指向函数的指针变量，它存储函数的地址，可以通过函数指针来调用函数。函数指针是 C++ 中实现回调函数、函数表和多态性的重要机制。 函数指针的基本概念 函数指针的声明和定义 #include &lt;iostream&gt; // 普通函数 int add(int a, int b) { return a + b; } int subtract(int a, int b) { return a - b; } int main() { // 函数指针的声明语法：返回类型 (*指针名)(参数列表) int (*funcPtr)(int, i... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 08:26:47 GMT</pubDate>
+    <title>智能指针基础</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E5%9F%BA%E7%A1%80</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E5%9F%BA%E7%A1%80</guid>
+    <description><![CDATA[ 智能指针是 C++11 引入的重要特性，它们提供了自动内存管理功能，帮助避免内存泄漏、悬空指针等常见问题。智能指针是现代 C++ 编程的核心组成部分。 智能指针概述 为什么需要智能指针 #include &lt;iostream&gt; // 传统指针的问题示例 void traditionalPointerProblems() { std::cout &lt;&lt; &quot;=== 传统指针的问题 ===&quot; &lt;&lt; std::endl; // 1. ]]></description>
+    <pubDate>Sat, 09 Aug 2025 09:40:57 GMT</pubDate>
   </item><item>
-    <title>内联函数</title>
-    <link>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0</guid>
-    <description><![CDATA[ 1. ]]></description>
-    <pubDate>Sat, 09 Aug 2025 08:24:19 GMT</pubDate>
+    <title>指针与引用的区别</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8%E7%9A%84%E5%8C%BA%E5%88%AB</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8%E7%9A%84%E5%8C%BA%E5%88%AB</guid>
+    <description><![CDATA[ 指针与引用是 C++ 中两个重要的概念，虽然它们都可以用来间接访问对象，但在语法、语义和使用方式上有着显著的区别。 基本概念对比 定义和初始化 #include &lt;iostream&gt; int main() { int x = 42; int y = 100; // 指针的声明和初始化 int* ptr; // 可以声明但不初始化 ptr = &amp;x; // 后续可以赋值 int* ptr2 = &amp;x; // 声明时初始化 int* ptr3 = nullptr; // 可以初始化为空 // 引用的声明和初始化 int&amp; ref = x; // 必须在声明时初始... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 09:38:16 GMT</pubDate>
   </item><item>
-    <title>默认参数</title>
-    <link>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0</guid>
-    <description><![CDATA[ 1. ]]></description>
-    <pubDate>Sat, 09 Aug 2025 08:24:19 GMT</pubDate>
+    <title>引用的概念与使用</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E5%BC%95%E7%94%A8%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E4%BD%BF%E7%94%A8</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E5%BC%95%E7%94%A8%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E4%BD%BF%E7%94%A8</guid>
+    <description><![CDATA[ 引用（Reference）是 C++ 中的一个重要特性，它为已存在的变量提供了一个别名。引用在很多方面比指针更安全、更易用，是现代 C++ 编程的重要组成部分。 引用的基本概念 什么是引用 引用可以看作是一个已存在变量的别名。对引用的任何操作，实际上都是对它所引用的原始变量的操作。 #include &lt;iostream&gt; int main() { // 普通变量 int x = 42; // 引用声明：必须在声明时初始化 int&amp; ref = x; // ref 是 x 的引用（别名） std::cout &lt;&lt; &quot;引用的基本概念:&quot; &lt;... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 09:34:24 GMT</pubDate>
   </item><item>
-    <title>函数重载</title>
-    <link>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD</guid>
-    <description><![CDATA[ C++ 中的函数重载（Function Overloading）允许在同一作用域内定义多个同名函数，只要它们的参数列表不同。这是 C++ 多态性的一种体现，使得函数调用更加直观和灵活。 函数重载的基本概念 重载的基本规则 函数重载基于函数签名的不同，函数签名包括： 函数名 参数的数量 参数的类型 参数的顺序 注意：返回类型不是函数签名的一部分！ // 合法的重载：参数数量不同 void print(int x) { std::cout &lt;&lt; &quot;Integer: &quot; &lt;&lt; x &lt;&lt; std::endl; } void print(int x... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 06:27:49 GMT</pubDate>
+    <title>动态内存分配</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D</guid>
+    <description><![CDATA[ 动态内存分配是 C++ 中的重要概念，它允许程序在运行时根据需要分配和释放内存。这与静态内存分配（编译时确定大小）形成对比。 内存分区概述 程序内存布局 #include &lt;iostream&gt; // 全局变量 - 存储在数据段 int global_var = 100; static int static_global = 200; // 常量 - 存储在只读数据段 const int const_global = 300; void demonstrateMemoryLayout() { // 局部变量 - 存储在栈上 int local_var = 400; static in... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 09:24:09 GMT</pubDate>
   </item><item>
-    <title>参数传递</title>
-    <link>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92</guid>
-    <description><![CDATA[ 值传递（Pass by Value） 基本概念 值传递是将实参的值复制给形参，函数内部操作的是副本，不会影响原始变量。 void modifyValue(int x) { x = 100; // 只修改局部副本 std::cout &lt;&lt; &quot;Inside function: &quot; &lt;&lt; x &lt;&lt; std::endl; // 100 } int main() { int a = 10; modifyValue(a); std::cout &lt;&lt; &quot;After function: &quot; &lt;&lt; a &lt;&... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 06:25:50 GMT</pubDate>
+    <title>指针与数组的关系</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E6%8C%87%E9%92%88%E4%B8%8E%E6%95%B0%E7%BB%84%E7%9A%84%E5%85%B3%E7%B3%BB</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E6%8C%87%E9%92%88%E4%B8%8E%E6%95%B0%E7%BB%84%E7%9A%84%E5%85%B3%E7%B3%BB</guid>
+    <description><![CDATA[ 指针与数组在 C++ 中有着密切的关系，理解它们之间的联系和区别对于掌握 C++ 至关重要。 数组名与指针的关系 数组名的本质 #include &lt;iostream&gt; int main() { int arr[5] = {10, 20, 30, 40, 50}; // 数组名在大多数情况下会退化为指向第一个元素的指针 std::cout &lt;&lt; &quot;数组名和指针的关系:&quot; &lt;&lt; std::endl; std::cout &lt;&lt; &quot;arr = &quot; &lt;&lt; arr &lt;&lt; std::endl; /... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 09:21:47 GMT</pubDate>
   </item><item>
-    <title>函数定义与声明</title>
-    <link>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%A3%B0%E6%98%8E</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%A3%B0%E6%98%8E</guid>
-    <description><![CDATA[ 核心比喻：书的目录与章节 想象一本书： 声明 (Declaration) 就像是书的目录。它告诉你“有一章叫做‘第五章：太空探索’，它在第 123 页”。它告诉你函数存在，它的名字是什么，它需要什么参数，以及它会返回什么类型的值。但目录本身不包含章节的内容。 定义 (Definition) 就像是书的具体章节内容。它提供了“第五章：太空探索”的全部文字和细节。它提供了函数的具体实现，也就是函数被调用时实际执行的代码。 有了目录（声明），你就可以在书的其他地方引用“第五章”（调用函数），因为你知道它确实存在。但要真正阅读内容，你必须翻到第 123 页去看它的定义。 Part 1: 函数声明 (F... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 06:23:10 GMT</pubDate>
+    <title>指针的概念与操作</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E6%8C%87%E9%92%88%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%93%8D%E4%BD%9C</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E6%8C%87%E9%92%88%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%93%8D%E4%BD%9C</guid>
+    <description><![CDATA[ 指针是 C++ 中最重要也是最具挑战性的概念之一。指针是一个变量，它存储另一个变量的内存地址。理解指针对于掌握 C++ 至关重要。 指针的基本概念 什么是指针 #include &lt;iostream&gt; int main() { // 普通变量 int x = 42; // 指针变量：存储其他变量的地址 int* ptr = &amp;x; // ptr 指向 x 的地址 std::cout &lt;&lt; &quot;变量 x 的值: &quot; &lt;&lt; x &lt;&lt; std::endl; std::cout &lt;&lt; &quot;变量 x 的地址: &... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 09:19:08 GMT</pubDate>
   </item><item>
-    <title>README</title>
-    <link>https://quartz.jzhao.xyz/README</link>
-    <guid>https://quartz.jzhao.xyz/README</guid>
-    <description><![CDATA[ mdbox - 多领域知识库笔记 介绍 欢迎来到 mdbox 知识库！本仓库用于整理和归档多个技术方向的学习笔记，涵盖编程语言、网络安全、CTF、数据库等主题。所有内容都以 Markdown 形式编写，并适配 Obsidian 使用。 当然也可以在线使用： 在线网址 主要分类 编程语言: Python、Java、C/C++、汇编 网络安全: Web 安全、KALI、CTF 题解 脚本语言: PowerShell、VBScript、JavaScript 数据库: MySQL、SQLite 协作指导 如何参与 Fork 仓库: 点击右上角的 Fork 按钮，创建仓库的副本到你自己的 GitHub ... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 06:07:42 GMT</pubDate>
+    <title>字符串操作函数</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%95%B0%E7%BB%84%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%95%B0%E7%BB%84%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0</guid>
+    <description><![CDATA[ 好的，我们来对 C++ 中的字符串操作函数进行一次全面而详细的讲解。 我们将分为三个主要部分： C 风格字符串的操作函数 (&lt;cstring&gt;头文件)：这是从 C 语言继承来的，理解它们有助于了解 C++ 的历史和与 C 库的交互，但在现代 C++ 中应谨慎使用。 std::string 类的成员函数 (&lt;string&gt;头文件)：这是现代 C++ 中处理字符串的首选方式，安全、方便、功能强大。 作用于 std::string 的 STL 算法 (&lt;algorithm&gt;头文件)：展示了 std::string作为标准容器的强大之处。 Part 1: C 风格字... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 09:11:15 GMT</pubDate>
   </item><item>
-    <title>index</title>
-    <link>https://quartz.jzhao.xyz/</link>
-    <guid>https://quartz.jzhao.xyz/</guid>
-    <description><![CDATA[ mdbox - 多领域知识库笔记 介绍 欢迎来到 mdbox 知识库！本仓库用于整理和归档多个技术方向的学习笔记，涵盖编程语言、网络安全、CTF、数据库等主题。所有内容都以 Markdown 形式编写，并适配 Obsidian 使用。 当然也可以在线使用： 在线网址 主要分类 编程语言: Python、Java、C/C++、汇编 网络安全: Web 安全、KALI、CTF 题解 脚本语言: PowerShell、VBScript、JavaScript 数据库: MySQL、SQLite 协作指导 如何参与 Fork 仓库: 点击右上角的 Fork 按钮，创建仓库的副本到你自己的 GitHub ... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 06:07:42 GMT</pubDate>
+    <title>string类的使用</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%95%B0%E7%BB%84%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2/string%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%95%B0%E7%BB%84%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2/string%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8</guid>
+    <description><![CDATA[ C++ 中的 std::string 类是标准库提供的字符串类，相比 C 风格字符串更安全、更易用、功能更强大。它是现代 C++ 中处理字符串的首选方式。 string 类的基础 包含头文件和基本声明 #include &lt;iostream&gt; #include &lt;string&gt; #include &lt;vector&gt; int main() { // 1. ]]></description>
+    <pubDate>Sat, 09 Aug 2025 09:02:04 GMT</pubDate>
   </item><item>
-    <title>index</title>
-    <link>https://quartz.jzhao.xyz/c++/</link>
-    <guid>https://quartz.jzhao.xyz/c++/</guid>
-    <description><![CDATA[ C++ 系统学习目录 一、基础入门 1. C++概述与环境搭建 C++的历史与特点 编译器安装（GCC、Clang、MSVC） IDE选择与配置 第一个C++程序 编译与链接过程 2. ]]></description>
-    <pubDate>Sat, 09 Aug 2025 05:49:35 GMT</pubDate>
+    <title>字符数组与C风格字符串</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%95%B0%E7%BB%84%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%AD%97%E7%AC%A6%E6%95%B0%E7%BB%84%E4%B8%8EC%E9%A3%8E%E6%A0%BC%E5%AD%97%E7%AC%A6%E4%B8%B2</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%95%B0%E7%BB%84%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%AD%97%E7%AC%A6%E6%95%B0%E7%BB%84%E4%B8%8EC%E9%A3%8E%E6%A0%BC%E5%AD%97%E7%AC%A6%E4%B8%B2</guid>
+    <description><![CDATA[ C++ 中的字符数组和 C 风格字符串是处理文本数据的基础方式。虽然现代 C++ 推荐使用 std::string，但理解字符数组和 C 风格字符串仍然非常重要。 字符数组基础 字符数组的声明和初始化 #include &lt;iostream&gt; #include &lt;cstring&gt; int main() { // 1. ]]></description>
+    <pubDate>Sat, 09 Aug 2025 08:59:09 GMT</pubDate>
   </item><item>
-    <title>引用与指针</title>
-    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%BC%95%E7%94%A8%E4%B8%8E%E6%8C%87%E9%92%88</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%BC%95%E7%94%A8%E4%B8%8E%E6%8C%87%E9%92%88</guid>
-    <description><![CDATA[ C++ 引用与指针详解 在 C++ 中，指针 (Pointer) 和 引用 (Reference) 都提供了间接访问其他变量的能力。然而，它们在底层概念、语法和使用方式上有着本质的区别。理解这些区别对于编写安全、高效的 C++ 代码至关重要。 一个简单的比喻： 指针 就像一张写有朋友家庭住址的便签。你可以通过这张便签找到朋友的家，也可以擦掉这个地址，写上另一个地址，或者这张便签上什么都不写（空指针）。 引用 就像一个人的“绰号”或“别名”。绰号就是这个人本身，它不是一个独立的东西，一旦起了绰号，它就一直代表这个人，不能再用作别人的绰号。 一、 指针 (Pointer) 1. ]]></description>
-    <pubDate>Sat, 09 Aug 2025 05:49:35 GMT</pubDate>
+    <title>一维与多维数组</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%95%B0%E7%BB%84%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2/%E4%B8%80%E7%BB%B4%E4%B8%8E%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%95%B0%E7%BB%84%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2/%E4%B8%80%E7%BB%B4%E4%B8%8E%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84</guid>
+    <description><![CDATA[ C++ 中的数组是存储相同类型元素的连续内存块。数组分为一维数组和多维数组，是程序设计中最基础的数据结构之一。 一维数组 一维数组的声明和初始化 #include &lt;iostream&gt; int main() { // 1. ]]></description>
+    <pubDate>Sat, 09 Aug 2025 08:53:43 GMT</pubDate>
   </item>
     </channel>
   </rss>
