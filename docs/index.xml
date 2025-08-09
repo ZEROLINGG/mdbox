@@ -6,65 +6,65 @@
       <description>Last 10 notes on Quartz 4</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>联合体</title>
-    <link>https://quartz.jzhao.xyz/c++/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%E8%81%94%E5%90%88%E4%BD%93/%E8%81%94%E5%90%88%E4%BD%93</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%E8%81%94%E5%90%88%E4%BD%93/%E8%81%94%E5%90%88%E4%BD%93</guid>
-    <description><![CDATA[ 联合体（Union）是 C++ 中的一种特殊数据类型，它允许在同一内存位置存储不同类型的数据。联合体的所有成员共享同一块内存空间，因此在任何时刻只能存储其中一个成员的值。 联合体的基本概念 联合体的定义和特性 #include &lt;iostream&gt; #include &lt;string&gt; #include &lt;cstring&gt; // 基本联合体定义 union BasicUnion { int intValue; float floatValue; char charValue; }; // 带有不同大小成员的联合体 union DataUnion { char ... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 11:59:37 GMT</pubDate>
+    <title>位域</title>
+    <link>https://quartz.jzhao.xyz/c++/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%E8%81%94%E5%90%88%E4%BD%93/%E4%BD%8D%E5%9F%9F</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%E8%81%94%E5%90%88%E4%BD%93/%E4%BD%8D%E5%9F%9F</guid>
+    <description><![CDATA[ Part 1: 核心概念：什么是位域？ 定义：位域是一种在结构体 (struct) 或联合体 (union) 中，允许我们将一个整型成员变量的存储空间精确到位(bit) 级别的机制。 正常情况下，一个 int 或 char 变量至少会占用一个字节（8 位）的内存，即使你只需要用其中的 1 位或 2 位。位域允许我们将多个这样的“小”成员打包到同一个字节或几个字节中，从而节省内存空间。 通俗比喻： 常规结构体成员：就像你为每件小物品（比如一颗纽扣、一根针）都准备一个独立的、标准大小的盒子。即使物品很小，盒子也那么大，非常浪费空间。 位域：就像你准备一个大盒子，然后在里面画好小格子。你可以把纽扣放... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 12:59:12 GMT</pubDate>
+  </item><item>
+    <title>动态数组</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%95%B0%E7%BB%84%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%95%B0%E7%BB%84%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2/%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84</guid>
+    <description><![CDATA[ 动态数组是在程序运行时根据需要分配和调整大小的数组。与静态数组不同，动态数组的大小不需要在编译时确定，可以根据程序的实际需求进行动态调整。 动态数组的基本概念 静态数组 vs 动态数组 #include &lt;iostream&gt; #include &lt;vector&gt; void demonstrateStaticVsDynamic() { std::cout &lt;&lt; &quot;=== 静态数组 vs 动态数组 ===&quot; &lt;&lt; std::endl; // 静态数组 - 编译时确定大小 int staticArray[5] = {1, 2, 3, ... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 12:51:18 GMT</pubDate>
+  </item><item>
+    <title>递归函数</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0</guid>
+    <description><![CDATA[ 递归函数是指在函数体内调用自身的函数。递归是一种强大的编程技术，它将复杂问题分解为相似但规模更小的子问题来解决。 递归的基本概念 递归的组成要素 #include &lt;iostream&gt; // 基本递归示例：计算阶乘 int factorial(int n) { // 1. ]]></description>
+    <pubDate>Sat, 09 Aug 2025 12:44:18 GMT</pubDate>
+  </item><item>
+    <title>异常处理基础</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%9F%BA%E7%A1%80</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%9F%BA%E7%A1%80</guid>
+    <description><![CDATA[ 异常处理是 C++ 中处理运行时错误的机制，它允许程序在遇到错误时优雅地处理，而不是直接崩溃。异常处理使用 try、catch 和 throw 关键字来实现。 异常处理的基本概念 try-catch 基础 #include &lt;iostream&gt; #include &lt;stdexcept&gt; #include &lt;string&gt; // 可能抛出异常的函数 int divide(int a, int b) { if (b == 0) { throw std::runtime_error(&quot;除数不能为零&quot;); } return a / b; } do... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 12:42:06 GMT</pubDate>
+  </item><item>
+    <title>作用域与生命周期</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F</guid>
+    <description><![CDATA[ 作用域（Scope）和生命周期（Lifetime）是 C++ 中的两个重要概念。作用域决定了变量在程序中的可见性，而生命周期决定了变量在内存中存在的时间。 作用域的基本概念 全局作用域 #include &lt;iostream&gt; // 全局变量 - 全局作用域 int globalVar = 100; const int globalConst = 200; static int staticGlobal = 300; // 文件作用域 // 全局函数 void globalFunction() { std::cout &lt;&lt; &quot;全局函数被调用&quot; &lt;... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 12:42:06 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://quartz.jzhao.xyz/c++/</link>
+    <guid>https://quartz.jzhao.xyz/c++/</guid>
+    <description><![CDATA[ C++ 系统学习目录 一、基础入门 1. C++概述与环境搭建 C++的历史与特点 编译器安装（GCC、Clang、MSVC） IDE选择与配置（Visual Studio、Code::Blocks、CLion、VS Code） 第一个C++程序 编译与链接过程 调试技巧与工具 2. ]]></description>
+    <pubDate>Sat, 09 Aug 2025 12:03:41 GMT</pubDate>
+  </item><item>
+    <title>变量声明与初始化</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%88%9D%E5%A7%8B%E5%8C%96</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%88%9D%E5%A7%8B%E5%8C%96</guid>
+    <description><![CDATA[ 一、变量声明 变量声明就是告诉编译器你要使用一个什么类型的变量，并为它分配内存空间。声明变量的基本语法如下： 类型 变量名; 示例： int age; double price; char grade; 此时，age 是一个整型变量，price 是一个双精度浮点型变量，grade 是一个字符型变量。 二、变量初始化 变量初始化就是在声明变量的同时给它赋一个初始值。初始化可以在声明时进行，也可以在声明后赋值。 1. ]]></description>
+    <pubDate>Sat, 09 Aug 2025 12:03:41 GMT</pubDate>
+  </item><item>
+    <title>一维与多维数组</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%95%B0%E7%BB%84%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2/%E4%B8%80%E7%BB%B4%E4%B8%8E%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%95%B0%E7%BB%84%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2/%E4%B8%80%E7%BB%B4%E4%B8%8E%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84</guid>
+    <description><![CDATA[ C++ 中的数组是存储相同类型元素的连续内存块。数组分为一维数组和多维数组，是程序设计中最基础的数据结构之一。 一维数组 一维数组的声明和初始化 #include &lt;iostream&gt; int main() { // 1. ]]></description>
+    <pubDate>Sat, 09 Aug 2025 12:03:41 GMT</pubDate>
   </item><item>
     <title>枚举类型</title>
     <link>https://quartz.jzhao.xyz/c++/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%E8%81%94%E5%90%88%E4%BD%93/%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B</link>
     <guid>https://quartz.jzhao.xyz/c++/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%E8%81%94%E5%90%88%E4%BD%93/%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B</guid>
     <description><![CDATA[ 枚举（Enumeration）是C++中一种用户定义的数据类型，用于定义一组命名的常量。枚举提供了一种将相关常量组织在一起的方式，使代码更加可读和易于维护。 传统枚举（C风格枚举） 基本语法和使用 #include &lt;iostream&gt; #include &lt;string&gt; // 基本枚举定义 enum Color { RED, // 默认值为 0 GREEN, // 默认值为 1 BLUE, // 默认值为 2 YELLOW // 默认值为 3 }; // 指定枚举值 enum Status { PENDING = 1, PROCESSING = 5, COMPLETE... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 11:59:37 GMT</pubDate>
-  </item><item>
-    <title>结构体数组与指针</title>
-    <link>https://quartz.jzhao.xyz/c++/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%E8%81%94%E5%90%88%E4%BD%93/%E7%BB%93%E6%9E%84%E4%BD%93%E6%95%B0%E7%BB%84%E4%B8%8E%E6%8C%87%E9%92%88</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%E8%81%94%E5%90%88%E4%BD%93/%E7%BB%93%E6%9E%84%E4%BD%93%E6%95%B0%E7%BB%84%E4%B8%8E%E6%8C%87%E9%92%88</guid>
-    <description><![CDATA[ 结构体数组与指针是 C++ 中处理复杂数据结构的重要技术。它们允许我们高效地管理和操作多个结构体对象。 结构体数组基础 静态结构体数组 #include &lt;iostream&gt; #include &lt;string&gt; #include &lt;iomanip&gt; struct Student { int id; std::string name; int age; double gpa; // 构造函数 Student(int i = 0, const std::string&amp; n = &quot;&quot;, int a = 0, double g = 0.0... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 11:46:32 GMT</pubDate>
+    <pubDate>Sat, 09 Aug 2025 12:03:41 GMT</pubDate>
   </item><item>
     <title>结构体定义与使用</title>
     <link>https://quartz.jzhao.xyz/c++/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%E8%81%94%E5%90%88%E4%BD%93/%E7%BB%93%E6%9E%84%E4%BD%93%E5%AE%9A%E4%B9%89%E4%B8%8E%E4%BD%BF%E7%94%A8</link>
     <guid>https://quartz.jzhao.xyz/c++/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%E8%81%94%E5%90%88%E4%BD%93/%E7%BB%93%E6%9E%84%E4%BD%93%E5%AE%9A%E4%B9%89%E4%B8%8E%E4%BD%BF%E7%94%A8</guid>
     <description><![CDATA[ 结构体（struct）是 C++ 中用于组织相关数据的复合数据类型。它允许将不同类型的变量组合在一起，形成一个新的数据类型。 结构体的基本概念 结构体的定义 #include &lt;iostream&gt; #include &lt;string&gt; // 基本结构体定义 struct Point { int x; int y; }; // 带有不同数据类型的结构体 struct Student { int id; std::string name; double gpa; bool isActive; }; // 嵌套结构体 struct Address { std::string s... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 11:29:54 GMT</pubDate>
-  </item><item>
-    <title>README</title>
-    <link>https://quartz.jzhao.xyz/README</link>
-    <guid>https://quartz.jzhao.xyz/README</guid>
-    <description><![CDATA[ mdbox - 多领域知识库笔记 介绍 欢迎来到 mdbox 知识库！本仓库用于整理和归档多个技术方向的学习笔记，涵盖编程语言、网络安全、CTF、数据库等主题。所有内容都以 Markdown 形式编写，并适配 Obsidian 使用。 当然也可以在线使用： 在线网址 主要分类 编程语言: Python、Java、C/C++、汇编 网络安全: Web 安全、KALI、CTF 题解 脚本语言: PowerShell、VBScript、JavaScript 数据库: MySQL、SQLite 协作指导 如何参与 Fork 仓库: 点击右上角的 Fork 按钮，创建仓库的副本到你自己的 GitHub ... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 09:46:24 GMT</pubDate>
-  </item><item>
-    <title>智能指针基础</title>
-    <link>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E5%9F%BA%E7%A1%80</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E5%9F%BA%E7%A1%80</guid>
-    <description><![CDATA[ 智能指针是 C++11 引入的重要特性，它们提供了自动内存管理功能，帮助避免内存泄漏、悬空指针等常见问题。智能指针是现代 C++ 编程的核心组成部分。 智能指针概述 为什么需要智能指针 #include &lt;iostream&gt; // 传统指针的问题示例 void traditionalPointerProblems() { std::cout &lt;&lt; &quot;=== 传统指针的问题 ===&quot; &lt;&lt; std::endl; // 1. ]]></description>
-    <pubDate>Sat, 09 Aug 2025 09:46:24 GMT</pubDate>
-  </item><item>
-    <title>index</title>
-    <link>https://quartz.jzhao.xyz/</link>
-    <guid>https://quartz.jzhao.xyz/</guid>
-    <description><![CDATA[ mdbox - 多领域知识库笔记 介绍 欢迎来到 mdbox 知识库！本仓库用于整理和归档多个技术方向的学习笔记，涵盖编程语言、网络安全、CTF、数据库等主题。所有内容都以 Markdown 形式编写，并适配 Obsidian 使用。 当然也可以在线使用： 在线网址 主要分类 编程语言: Python、Java、C/C++、汇编 网络安全: Web 安全、KALI、CTF 题解 脚本语言: PowerShell、VBScript、JavaScript 数据库: MySQL、SQLite 协作指导 如何参与 Fork 仓库: 点击右上角的 Fork 按钮，创建仓库的副本到你自己的 GitHub ... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 09:46:24 GMT</pubDate>
-  </item><item>
-    <title>index</title>
-    <link>https://quartz.jzhao.xyz/c++/</link>
-    <guid>https://quartz.jzhao.xyz/c++/</guid>
-    <description><![CDATA[ C++ 系统学习目录 一、基础入门 1. C++概述与环境搭建 C++的历史与特点 编译器安装（GCC、Clang、MSVC） IDE选择与配置 第一个C++程序 编译与链接过程 2. ]]></description>
-    <pubDate>Sat, 09 Aug 2025 09:42:51 GMT</pubDate>
-  </item><item>
-    <title>动态内存分配</title>
-    <link>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D</guid>
-    <description><![CDATA[ 动态内存分配是 C++ 中的重要概念，它允许程序在运行时根据需要分配和释放内存。这与静态内存分配（编译时确定大小）形成对比。 内存分区概述 程序内存布局 #include &lt;iostream&gt; // 全局变量 - 存储在数据段 int global_var = 100; static int static_global = 200; // 常量 - 存储在只读数据段 const int const_global = 300; void demonstrateMemoryLayout() { // 局部变量 - 存储在栈上 int local_var = 400; static in... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 09:42:51 GMT</pubDate>
-  </item><item>
-    <title>引用的概念与使用</title>
-    <link>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E5%BC%95%E7%94%A8%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E4%BD%BF%E7%94%A8</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8/%E5%BC%95%E7%94%A8%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E4%BD%BF%E7%94%A8</guid>
-    <description><![CDATA[ 引用（Reference）是 C++ 中的一个重要特性，它为已存在的变量提供了一个别名。引用在很多方面比指针更安全、更易用，是现代 C++ 编程的重要组成部分。 引用的基本概念 什么是引用 引用可以看作是一个已存在变量的别名。对引用的任何操作，实际上都是对它所引用的原始变量的操作。 #include &lt;iostream&gt; int main() { // 普通变量 int x = 42; // 引用声明：必须在声明时初始化 int&amp; ref = x; // ref 是 x 的引用（别名） std::cout &lt;&lt; &quot;引用的基本概念:&quot; &lt;... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 09:42:51 GMT</pubDate>
+    <pubDate>Sat, 09 Aug 2025 12:03:41 GMT</pubDate>
   </item>
     </channel>
   </rss>
