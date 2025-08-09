@@ -6,35 +6,53 @@
       <description>Last 10 notes on Quartz 4</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>跳转语句</title>
-    <link>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E8%B7%B3%E8%BD%AC%E8%AF%AD%E5%8F%A5</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E8%B7%B3%E8%BD%AC%E8%AF%AD%E5%8F%A5</guid>
-    <description><![CDATA[ C++ 中的跳转语句用于改变程序的正常执行流程，使程序跳转到指定位置继续执行。虽然跳转语句功能强大，但过度使用会使代码难以理解和维护。 break 语句 基本用法 break 语句用于立即退出最内层的循环或 switch 语句。 // 在循环中使用 break for (int i = 0; i &lt; 10; i++) { if (i == 5) { break; // 当 i 等于 5 时退出循环 } std::cout &lt;&lt; i &lt;&lt; &quot; &quot;; } // 输出：0 1 2 3 4 // 在 while 循环中 int count = 0; w... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 05:46:51 GMT</pubDate>
+    <title>README</title>
+    <link>https://quartz.jzhao.xyz/README</link>
+    <guid>https://quartz.jzhao.xyz/README</guid>
+    <description><![CDATA[ mdbox - 多领域知识库笔记 介绍 欢迎来到 mdbox 知识库！本仓库用于整理和归档多个技术方向的学习笔记，涵盖编程语言、网络安全、CTF、数据库等主题。所有内容都以 Markdown 形式编写，并适配 Obsidian 使用。 当然也可以在线使用： 在线网址 主要分类 编程语言: Python、Java、C/C++、汇编 网络安全: Web 安全、KALI、CTF 题解 脚本语言: PowerShell、VBScript、JavaScript 数据库: MySQL、SQLite 协作指导 如何参与 Fork 仓库: 点击右上角的 Fork 按钮，创建仓库的副本到你自己的 GitHub ... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 06:07:42 GMT</pubDate>
   </item><item>
-    <title>循环语句</title>
-    <link>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5</guid>
-    <description><![CDATA[ C++ 中的循环语句用于重复执行一段代码，直到满足特定条件。循环是编程中最基本的控制结构之一。 for 循环 传统 for 循环 // 基本语法：for (初始化; 条件; 更新) for (int i = 0; i &lt; 10; i++) { std::cout &lt;&lt; i &lt;&lt; &quot; &quot;; } // 输出：0 1 2 3 4 5 6 7 8 9 // 多变量初始化和更新 for (int i = 0, j = 10; i &lt; j; i++, j--) { std::cout &lt;&lt; &quot;i=&quot; &lt;&lt; ... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 05:39:37 GMT</pubDate>
-  </item><item>
-    <title>条件语句</title>
-    <link>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5</guid>
-    <description><![CDATA[ C++ 中的条件语句用于根据特定条件执行不同的代码路径。条件语句是程序控制流的核心组成部分。 if 语句 基本 if 语句 int x = 10; // 简单 if if (x &gt; 5) { std::cout &lt;&lt; &quot;x is greater than 5&quot; &lt;&lt; std::endl; } // 单行语句可以省略花括号（不推荐） if (x &gt; 5) std::cout &lt;&lt; &quot;x is greater than 5&quot; &lt;&lt; std::endl; // 条件为假时不执行 if (x &lt; ... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 05:36:59 GMT</pubDate>
-  </item><item>
-    <title>类型转换</title>
-    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2</guid>
-    <description><![CDATA[ C++ 中的类型转换是将一种数据类型转换为另一种数据类型的过程。理解类型转换对于编写安全、高效的代码至关重要。 隐式类型转换 隐式类型转换（也称为自动类型转换）是编译器自动执行的类型转换，无需程序员显式指定。 基本类型的隐式转换 算术类型转换： int i = 42; double d = i; // int 转 double（安全） float f = 3.14; int j = f; // float 转 int（可能丢失精度） char c = &#039;A&#039;; int ascii = c; // char 转 int（提升） bool b = 42; // int 转 bo... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 05:32:05 GMT</pubDate>
+    <title>index</title>
+    <link>https://quartz.jzhao.xyz/</link>
+    <guid>https://quartz.jzhao.xyz/</guid>
+    <description><![CDATA[ mdbox - 多领域知识库笔记 介绍 欢迎来到 mdbox 知识库！本仓库用于整理和归档多个技术方向的学习笔记，涵盖编程语言、网络安全、CTF、数据库等主题。所有内容都以 Markdown 形式编写，并适配 Obsidian 使用。 当然也可以在线使用： 在线网址 主要分类 编程语言: Python、Java、C/C++、汇编 网络安全: Web 安全、KALI、CTF 题解 脚本语言: PowerShell、VBScript、JavaScript 数据库: MySQL、SQLite 协作指导 如何参与 Fork 仓库: 点击右上角的 Fork 按钮，创建仓库的副本到你自己的 GitHub ... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 06:07:42 GMT</pubDate>
   </item><item>
     <title>index</title>
     <link>https://quartz.jzhao.xyz/c++/</link>
     <guid>https://quartz.jzhao.xyz/c++/</guid>
     <description><![CDATA[ C++ 系统学习目录 一、基础入门 1. C++概述与环境搭建 C++的历史与特点 编译器安装（GCC、Clang、MSVC） IDE选择与配置 第一个C++程序 编译与链接过程 2. ]]></description>
-    <pubDate>Sat, 09 Aug 2025 03:55:46 GMT</pubDate>
+    <pubDate>Sat, 09 Aug 2025 05:49:35 GMT</pubDate>
+  </item><item>
+    <title>引用与指针</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%BC%95%E7%94%A8%E4%B8%8E%E6%8C%87%E9%92%88</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%BC%95%E7%94%A8%E4%B8%8E%E6%8C%87%E9%92%88</guid>
+    <description><![CDATA[ C++ 引用与指针详解 在 C++ 中，指针 (Pointer) 和 引用 (Reference) 都提供了间接访问其他变量的能力。然而，它们在底层概念、语法和使用方式上有着本质的区别。理解这些区别对于编写安全、高效的 C++ 代码至关重要。 一个简单的比喻： 指针 就像一张写有朋友家庭住址的便签。你可以通过这张便签找到朋友的家，也可以擦掉这个地址，写上另一个地址，或者这张便签上什么都不写（空指针）。 引用 就像一个人的“绰号”或“别名”。绰号就是这个人本身，它不是一个独立的东西，一旦起了绰号，它就一直代表这个人，不能再用作别人的绰号。 一、 指针 (Pointer) 1. ]]></description>
+    <pubDate>Sat, 09 Aug 2025 05:49:35 GMT</pubDate>
+  </item><item>
+    <title>类型转换</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2</guid>
+    <description><![CDATA[ C++ 中的类型转换是将一种数据类型转换为另一种数据类型的过程。理解类型转换对于编写安全、高效的代码至关重要。 隐式类型转换 隐式类型转换（也称为自动类型转换）是编译器自动执行的类型转换，无需程序员显式指定。 基本类型的隐式转换 算术类型转换： int i = 42; double d = i; // int 转 double（安全） float f = 3.14; int j = f; // float 转 int（可能丢失精度） char c = &#039;A&#039;; int ascii = c; // char 转 int（提升） bool b = 42; // int 转 bo... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 05:49:35 GMT</pubDate>
+  </item><item>
+    <title>循环语句</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5</guid>
+    <description><![CDATA[ C++ 中的循环语句用于重复执行一段代码，直到满足特定条件。循环是编程中最基本的控制结构之一。 for 循环 传统 for 循环 // 基本语法：for (初始化; 条件; 更新) for (int i = 0; i &lt; 10; i++) { std::cout &lt;&lt; i &lt;&lt; &quot; &quot;; } // 输出：0 1 2 3 4 5 6 7 8 9 // 多变量初始化和更新 for (int i = 0, j = 10; i &lt; j; i++, j--) { std::cout &lt;&lt; &quot;i=&quot; &lt;&lt; ... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 05:49:35 GMT</pubDate>
+  </item><item>
+    <title>条件语句</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5</guid>
+    <description><![CDATA[ C++ 中的条件语句用于根据特定条件执行不同的代码路径。条件语句是程序控制流的核心组成部分。 if 语句 基本 if 语句 int x = 10; // 简单 if if (x &gt; 5) { std::cout &lt;&lt; &quot;x is greater than 5&quot; &lt;&lt; std::endl; } // 单行语句可以省略花括号（不推荐） if (x &gt; 5) std::cout &lt;&lt; &quot;x is greater than 5&quot; &lt;&lt; std::endl; // 条件为假时不执行 if (x &lt; ... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 05:49:35 GMT</pubDate>
+  </item><item>
+    <title>跳转语句</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E8%B7%B3%E8%BD%AC%E8%AF%AD%E5%8F%A5</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E8%B7%B3%E8%BD%AC%E8%AF%AD%E5%8F%A5</guid>
+    <description><![CDATA[ C++ 中的跳转语句用于改变程序的正常执行流程，使程序跳转到指定位置继续执行。虽然跳转语句功能强大，但过度使用会使代码难以理解和维护。 break 语句 基本用法 break 语句用于立即退出最内层的循环或 switch 语句。 // 在循环中使用 break for (int i = 0; i &lt; 10; i++) { if (i == 5) { break; // 当 i 等于 5 时退出循环 } std::cout &lt;&lt; i &lt;&lt; &quot; &quot;; } // 输出：0 1 2 3 4 // 在 while 循环中 int count = 0; w... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 05:49:35 GMT</pubDate>
   </item><item>
     <title>命名空间</title>
     <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4</link>
@@ -47,24 +65,6 @@
     <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81-iostream</guid>
     <description><![CDATA[ C++ 的 I/O 系统是基于一个非常优雅的抽象概念——流 (Stream)。一个流就是一个字节序列，你可以从中读取（输入流）或向其写入（输出流）。这个抽象使得我们能用同样的方式来处理不同的 I/O 设备，例如键盘、屏幕、文件，甚至是内存中的字符串。 整个 I/O 库的核心在三个头文件中： &lt;iostream&gt;: 用于标准输入/输出流（键盘、屏幕）。 &lt;fstream&gt;: 用于文件流。 &lt;sstream&gt;: 用于字符串流（在内存中进行 I/O）。 第一部分：标准输入输出 (&lt;iostream&gt;) 这是最常用、最基础的 I/O 操作。&lt;ios... ]]></description>
     <pubDate>Sat, 09 Aug 2025 03:55:46 GMT</pubDate>
-  </item><item>
-    <title>运算符与表达式</title>
-    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%A1%A8%E8%BE%BE%E5%BC%8F</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%A1%A8%E8%BE%BE%E5%BC%8F</guid>
-    <description><![CDATA[ 1. 运算符的分类 我们可以从两个维度对运算符进行分类： A. ]]></description>
-    <pubDate>Sat, 09 Aug 2025 03:55:46 GMT</pubDate>
-  </item><item>
-    <title>README</title>
-    <link>https://quartz.jzhao.xyz/README</link>
-    <guid>https://quartz.jzhao.xyz/README</guid>
-    <description><![CDATA[ mdbox - 多领域知识库笔记 介绍 欢迎来到 mdbox 知识库！本仓库用于整理和归档多个技术方向的学习笔记，涵盖编程语言、网络安全、CTF、数据库等主题。所有内容都以 Markdown 形式编写，并适配 Obsidian 使用。 当然也可以在线使用： 在线网址 主要分类 编程语言: Python、Java、C/C++、汇编 网络安全: Web 安全、KALI、CTF 题解 脚本语言: PowerShell、VBScript、JavaScript 数据库: MySQL、SQLite 协作指导 如何参与 Fork 仓库: 点击右上角的 Fork 按钮，创建仓库的副本到你自己的 GitHub ... ]]></description>
-    <pubDate>Fri, 08 Aug 2025 13:28:14 GMT</pubDate>
-  </item><item>
-    <title>index</title>
-    <link>https://quartz.jzhao.xyz/</link>
-    <guid>https://quartz.jzhao.xyz/</guid>
-    <description><![CDATA[ mdbox - 多领域知识库笔记 介绍 欢迎来到 mdbox 知识库！本仓库用于整理和归档多个技术方向的学习笔记，涵盖编程语言、网络安全、CTF、数据库等主题。所有内容都以 Markdown 形式编写，并适配 Obsidian 使用。 当然也可以在线使用： 在线网址 主要分类 编程语言: Python、Java、C/C++、汇编 网络安全: Web 安全、KALI、CTF 题解 脚本语言: PowerShell、VBScript、JavaScript 数据库: MySQL、SQLite 协作指导 如何参与 Fork 仓库: 点击右上角的 Fork 按钮，创建仓库的副本到你自己的 GitHub ... ]]></description>
-    <pubDate>Fri, 08 Aug 2025 13:28:14 GMT</pubDate>
   </item>
     </channel>
   </rss>
