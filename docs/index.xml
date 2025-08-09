@@ -6,6 +6,42 @@
       <description>Last 10 notes on Quartz 4</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>函数指针</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88</guid>
+    <description><![CDATA[ C++ 中的函数指针（Function Pointers）是指向函数的指针变量，它存储函数的地址，可以通过函数指针来调用函数。函数指针是 C++ 中实现回调函数、函数表和多态性的重要机制。 函数指针的基本概念 函数指针的声明和定义 #include &lt;iostream&gt; // 普通函数 int add(int a, int b) { return a + b; } int subtract(int a, int b) { return a - b; } int main() { // 函数指针的声明语法：返回类型 (*指针名)(参数列表) int (*funcPtr)(int, i... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 08:26:47 GMT</pubDate>
+  </item><item>
+    <title>内联函数</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0</guid>
+    <description><![CDATA[ 1. ]]></description>
+    <pubDate>Sat, 09 Aug 2025 08:24:19 GMT</pubDate>
+  </item><item>
+    <title>默认参数</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0</guid>
+    <description><![CDATA[ 1. ]]></description>
+    <pubDate>Sat, 09 Aug 2025 08:24:19 GMT</pubDate>
+  </item><item>
+    <title>函数重载</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD</guid>
+    <description><![CDATA[ C++ 中的函数重载（Function Overloading）允许在同一作用域内定义多个同名函数，只要它们的参数列表不同。这是 C++ 多态性的一种体现，使得函数调用更加直观和灵活。 函数重载的基本概念 重载的基本规则 函数重载基于函数签名的不同，函数签名包括： 函数名 参数的数量 参数的类型 参数的顺序 注意：返回类型不是函数签名的一部分！ // 合法的重载：参数数量不同 void print(int x) { std::cout &lt;&lt; &quot;Integer: &quot; &lt;&lt; x &lt;&lt; std::endl; } void print(int x... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 06:27:49 GMT</pubDate>
+  </item><item>
+    <title>参数传递</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92</guid>
+    <description><![CDATA[ 值传递（Pass by Value） 基本概念 值传递是将实参的值复制给形参，函数内部操作的是副本，不会影响原始变量。 void modifyValue(int x) { x = 100; // 只修改局部副本 std::cout &lt;&lt; &quot;Inside function: &quot; &lt;&lt; x &lt;&lt; std::endl; // 100 } int main() { int a = 10; modifyValue(a); std::cout &lt;&lt; &quot;After function: &quot; &lt;&lt; a &lt;&... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 06:25:50 GMT</pubDate>
+  </item><item>
+    <title>函数定义与声明</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%A3%B0%E6%98%8E</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%A3%B0%E6%98%8E</guid>
+    <description><![CDATA[ 核心比喻：书的目录与章节 想象一本书： 声明 (Declaration) 就像是书的目录。它告诉你“有一章叫做‘第五章：太空探索’，它在第 123 页”。它告诉你函数存在，它的名字是什么，它需要什么参数，以及它会返回什么类型的值。但目录本身不包含章节的内容。 定义 (Definition) 就像是书的具体章节内容。它提供了“第五章：太空探索”的全部文字和细节。它提供了函数的具体实现，也就是函数被调用时实际执行的代码。 有了目录（声明），你就可以在书的其他地方引用“第五章”（调用函数），因为你知道它确实存在。但要真正阅读内容，你必须翻到第 123 页去看它的定义。 Part 1: 函数声明 (F... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 06:23:10 GMT</pubDate>
+  </item><item>
     <title>README</title>
     <link>https://quartz.jzhao.xyz/README</link>
     <guid>https://quartz.jzhao.xyz/README</guid>
@@ -29,42 +65,6 @@
     <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%BC%95%E7%94%A8%E4%B8%8E%E6%8C%87%E9%92%88</guid>
     <description><![CDATA[ C++ 引用与指针详解 在 C++ 中，指针 (Pointer) 和 引用 (Reference) 都提供了间接访问其他变量的能力。然而，它们在底层概念、语法和使用方式上有着本质的区别。理解这些区别对于编写安全、高效的 C++ 代码至关重要。 一个简单的比喻： 指针 就像一张写有朋友家庭住址的便签。你可以通过这张便签找到朋友的家，也可以擦掉这个地址，写上另一个地址，或者这张便签上什么都不写（空指针）。 引用 就像一个人的“绰号”或“别名”。绰号就是这个人本身，它不是一个独立的东西，一旦起了绰号，它就一直代表这个人，不能再用作别人的绰号。 一、 指针 (Pointer) 1. ]]></description>
     <pubDate>Sat, 09 Aug 2025 05:49:35 GMT</pubDate>
-  </item><item>
-    <title>类型转换</title>
-    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2</guid>
-    <description><![CDATA[ C++ 中的类型转换是将一种数据类型转换为另一种数据类型的过程。理解类型转换对于编写安全、高效的代码至关重要。 隐式类型转换 隐式类型转换（也称为自动类型转换）是编译器自动执行的类型转换，无需程序员显式指定。 基本类型的隐式转换 算术类型转换： int i = 42; double d = i; // int 转 double（安全） float f = 3.14; int j = f; // float 转 int（可能丢失精度） char c = &#039;A&#039;; int ascii = c; // char 转 int（提升） bool b = 42; // int 转 bo... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 05:49:35 GMT</pubDate>
-  </item><item>
-    <title>循环语句</title>
-    <link>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5</guid>
-    <description><![CDATA[ C++ 中的循环语句用于重复执行一段代码，直到满足特定条件。循环是编程中最基本的控制结构之一。 for 循环 传统 for 循环 // 基本语法：for (初始化; 条件; 更新) for (int i = 0; i &lt; 10; i++) { std::cout &lt;&lt; i &lt;&lt; &quot; &quot;; } // 输出：0 1 2 3 4 5 6 7 8 9 // 多变量初始化和更新 for (int i = 0, j = 10; i &lt; j; i++, j--) { std::cout &lt;&lt; &quot;i=&quot; &lt;&lt; ... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 05:49:35 GMT</pubDate>
-  </item><item>
-    <title>条件语句</title>
-    <link>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5</guid>
-    <description><![CDATA[ C++ 中的条件语句用于根据特定条件执行不同的代码路径。条件语句是程序控制流的核心组成部分。 if 语句 基本 if 语句 int x = 10; // 简单 if if (x &gt; 5) { std::cout &lt;&lt; &quot;x is greater than 5&quot; &lt;&lt; std::endl; } // 单行语句可以省略花括号（不推荐） if (x &gt; 5) std::cout &lt;&lt; &quot;x is greater than 5&quot; &lt;&lt; std::endl; // 条件为假时不执行 if (x &lt; ... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 05:49:35 GMT</pubDate>
-  </item><item>
-    <title>跳转语句</title>
-    <link>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E8%B7%B3%E8%BD%AC%E8%AF%AD%E5%8F%A5</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E8%B7%B3%E8%BD%AC%E8%AF%AD%E5%8F%A5</guid>
-    <description><![CDATA[ C++ 中的跳转语句用于改变程序的正常执行流程，使程序跳转到指定位置继续执行。虽然跳转语句功能强大，但过度使用会使代码难以理解和维护。 break 语句 基本用法 break 语句用于立即退出最内层的循环或 switch 语句。 // 在循环中使用 break for (int i = 0; i &lt; 10; i++) { if (i == 5) { break; // 当 i 等于 5 时退出循环 } std::cout &lt;&lt; i &lt;&lt; &quot; &quot;; } // 输出：0 1 2 3 4 // 在 while 循环中 int count = 0; w... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 05:49:35 GMT</pubDate>
-  </item><item>
-    <title>命名空间</title>
-    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4</guid>
-    <description><![CDATA[ 1. ]]></description>
-    <pubDate>Sat, 09 Aug 2025 03:55:46 GMT</pubDate>
-  </item><item>
-    <title>输入输出流 iostream</title>
-    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81-iostream</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81-iostream</guid>
-    <description><![CDATA[ C++ 的 I/O 系统是基于一个非常优雅的抽象概念——流 (Stream)。一个流就是一个字节序列，你可以从中读取（输入流）或向其写入（输出流）。这个抽象使得我们能用同样的方式来处理不同的 I/O 设备，例如键盘、屏幕、文件，甚至是内存中的字符串。 整个 I/O 库的核心在三个头文件中： &lt;iostream&gt;: 用于标准输入/输出流（键盘、屏幕）。 &lt;fstream&gt;: 用于文件流。 &lt;sstream&gt;: 用于字符串流（在内存中进行 I/O）。 第一部分：标准输入输出 (&lt;iostream&gt;) 这是最常用、最基础的 I/O 操作。&lt;ios... ]]></description>
-    <pubDate>Sat, 09 Aug 2025 03:55:46 GMT</pubDate>
   </item>
     </channel>
   </rss>
