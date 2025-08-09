@@ -6,17 +6,53 @@
       <description>Last 10 notes on Quartz 4</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>跳转语句</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E8%B7%B3%E8%BD%AC%E8%AF%AD%E5%8F%A5</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E8%B7%B3%E8%BD%AC%E8%AF%AD%E5%8F%A5</guid>
+    <description><![CDATA[ C++ 中的跳转语句用于改变程序的正常执行流程，使程序跳转到指定位置继续执行。虽然跳转语句功能强大，但过度使用会使代码难以理解和维护。 break 语句 基本用法 break 语句用于立即退出最内层的循环或 switch 语句。 // 在循环中使用 break for (int i = 0; i &lt; 10; i++) { if (i == 5) { break; // 当 i 等于 5 时退出循环 } std::cout &lt;&lt; i &lt;&lt; &quot; &quot;; } // 输出：0 1 2 3 4 // 在 while 循环中 int count = 0; w... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 05:46:51 GMT</pubDate>
+  </item><item>
+    <title>循环语句</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5</guid>
+    <description><![CDATA[ C++ 中的循环语句用于重复执行一段代码，直到满足特定条件。循环是编程中最基本的控制结构之一。 for 循环 传统 for 循环 // 基本语法：for (初始化; 条件; 更新) for (int i = 0; i &lt; 10; i++) { std::cout &lt;&lt; i &lt;&lt; &quot; &quot;; } // 输出：0 1 2 3 4 5 6 7 8 9 // 多变量初始化和更新 for (int i = 0, j = 10; i &lt; j; i++, j--) { std::cout &lt;&lt; &quot;i=&quot; &lt;&lt; ... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 05:39:37 GMT</pubDate>
+  </item><item>
+    <title>条件语句</title>
+    <link>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5</guid>
+    <description><![CDATA[ C++ 中的条件语句用于根据特定条件执行不同的代码路径。条件语句是程序控制流的核心组成部分。 if 语句 基本 if 语句 int x = 10; // 简单 if if (x &gt; 5) { std::cout &lt;&lt; &quot;x is greater than 5&quot; &lt;&lt; std::endl; } // 单行语句可以省略花括号（不推荐） if (x &gt; 5) std::cout &lt;&lt; &quot;x is greater than 5&quot; &lt;&lt; std::endl; // 条件为假时不执行 if (x &lt; ... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 05:36:59 GMT</pubDate>
+  </item><item>
+    <title>类型转换</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2</guid>
+    <description><![CDATA[ C++ 中的类型转换是将一种数据类型转换为另一种数据类型的过程。理解类型转换对于编写安全、高效的代码至关重要。 隐式类型转换 隐式类型转换（也称为自动类型转换）是编译器自动执行的类型转换，无需程序员显式指定。 基本类型的隐式转换 算术类型转换： int i = 42; double d = i; // int 转 double（安全） float f = 3.14; int j = f; // float 转 int（可能丢失精度） char c = &#039;A&#039;; int ascii = c; // char 转 int（提升） bool b = 42; // int 转 bo... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 05:32:05 GMT</pubDate>
+  </item><item>
     <title>index</title>
     <link>https://quartz.jzhao.xyz/c++/</link>
     <guid>https://quartz.jzhao.xyz/c++/</guid>
     <description><![CDATA[ C++ 系统学习目录 一、基础入门 1. C++概述与环境搭建 C++的历史与特点 编译器安装（GCC、Clang、MSVC） IDE选择与配置 第一个C++程序 编译与链接过程 2. ]]></description>
-    <pubDate>Sat, 09 Aug 2025 03:53:51 GMT</pubDate>
+    <pubDate>Sat, 09 Aug 2025 03:55:46 GMT</pubDate>
   </item><item>
     <title>命名空间</title>
     <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4</link>
     <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4</guid>
     <description><![CDATA[ 1. ]]></description>
-    <pubDate>Sat, 09 Aug 2025 03:46:48 GMT</pubDate>
+    <pubDate>Sat, 09 Aug 2025 03:55:46 GMT</pubDate>
+  </item><item>
+    <title>输入输出流 iostream</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81-iostream</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81-iostream</guid>
+    <description><![CDATA[ C++ 的 I/O 系统是基于一个非常优雅的抽象概念——流 (Stream)。一个流就是一个字节序列，你可以从中读取（输入流）或向其写入（输出流）。这个抽象使得我们能用同样的方式来处理不同的 I/O 设备，例如键盘、屏幕、文件，甚至是内存中的字符串。 整个 I/O 库的核心在三个头文件中： &lt;iostream&gt;: 用于标准输入/输出流（键盘、屏幕）。 &lt;fstream&gt;: 用于文件流。 &lt;sstream&gt;: 用于字符串流（在内存中进行 I/O）。 第一部分：标准输入输出 (&lt;iostream&gt;) 这是最常用、最基础的 I/O 操作。&lt;ios... ]]></description>
+    <pubDate>Sat, 09 Aug 2025 03:55:46 GMT</pubDate>
+  </item><item>
+    <title>运算符与表达式</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%A1%A8%E8%BE%BE%E5%BC%8F</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%A1%A8%E8%BE%BE%E5%BC%8F</guid>
+    <description><![CDATA[ 1. 运算符的分类 我们可以从两个维度对运算符进行分类： A. ]]></description>
+    <pubDate>Sat, 09 Aug 2025 03:55:46 GMT</pubDate>
   </item><item>
     <title>README</title>
     <link>https://quartz.jzhao.xyz/README</link>
@@ -29,42 +65,6 @@
     <guid>https://quartz.jzhao.xyz/</guid>
     <description><![CDATA[ mdbox - 多领域知识库笔记 介绍 欢迎来到 mdbox 知识库！本仓库用于整理和归档多个技术方向的学习笔记，涵盖编程语言、网络安全、CTF、数据库等主题。所有内容都以 Markdown 形式编写，并适配 Obsidian 使用。 当然也可以在线使用： 在线网址 主要分类 编程语言: Python、Java、C/C++、汇编 网络安全: Web 安全、KALI、CTF 题解 脚本语言: PowerShell、VBScript、JavaScript 数据库: MySQL、SQLite 协作指导 如何参与 Fork 仓库: 点击右上角的 Fork 按钮，创建仓库的副本到你自己的 GitHub ... ]]></description>
     <pubDate>Fri, 08 Aug 2025 13:28:14 GMT</pubDate>
-  </item><item>
-    <title>index</title>
-    <link>https://quartz.jzhao.xyz/python/</link>
-    <guid>https://quartz.jzhao.xyz/python/</guid>
-    <description><![CDATA[ Python 知识概览 1. ]]></description>
-    <pubDate>Fri, 08 Aug 2025 13:22:49 GMT</pubDate>
-  </item><item>
-    <title>运算符与表达式</title>
-    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%A1%A8%E8%BE%BE%E5%BC%8F</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%A1%A8%E8%BE%BE%E5%BC%8F</guid>
-    <description><![CDATA[ 1. 运算符的分类 我们可以从两个维度对运算符进行分类： A. ]]></description>
-    <pubDate>Fri, 08 Aug 2025 10:32:02 GMT</pubDate>
-  </item><item>
-    <title>1.1.3.运算符</title>
-    <link>https://quartz.jzhao.xyz/python/1.%E5%9F%BA%E6%9C%AC/1.1.%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/1.1.3.%E8%BF%90%E7%AE%97%E7%AC%A6</link>
-    <guid>https://quartz.jzhao.xyz/python/1.%E5%9F%BA%E6%9C%AC/1.1.%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/1.1.3.%E8%BF%90%E7%AE%97%E7%AC%A6</guid>
-    <description><![CDATA[ Python 的运算符用于对变量和数值进行操作。它们根据功能可以分为以下几类，每一类中都有多个具体运算符。以下是对每类运算符的详尽讲解，包括其作用、使用示例及注意事项： 一、算术运算符（Arithmetic Operators） 运算符含义示例结果+加法3 + 25-减法5 - 23*乘法3 * 26/除法7 / 23.5//整除7 // 23%取余7 % 21**幂（乘方）2 ** 38 💡 注意： / 总是返回浮点数。 // 是地板除，结果向下取整。 ** 支持浮点指数，例如 4 ** 0.5 = 2.0。 二、比较运算符（Comparison Operators） 运算符含义示例结果=... ]]></description>
-    <pubDate>Fri, 08 Aug 2025 10:32:02 GMT</pubDate>
-  </item><item>
-    <title>Map 接口</title>
-    <link>https://quartz.jzhao.xyz/Java/%E6%A0%B8%E5%BF%83%E7%B1%BB%E5%BA%93/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/Map-%E6%8E%A5%E5%8F%A3</link>
-    <guid>https://quartz.jzhao.xyz/Java/%E6%A0%B8%E5%BF%83%E7%B1%BB%E5%BA%93/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/Map-%E6%8E%A5%E5%8F%A3</guid>
-    <description><![CDATA[ Map 接口是 Java 集合框架中用于存储键值对（key-value）的一种结构。与 **Collection** 接口不同，**Map** 不是 **Collection** 的子接口。它专门用于****通过键来快速访问对应的值，并且键不能重复（基于 equals() 和 hashCode()）。 一、Map 接口的基本特征 特性说明键值对结构每个元素都由一个键（key）和一个值（value）组成。键唯一同一个 Map中不能有重复的键。值可重复值可以重复，不受限制。无序大多数实现类（如 HashMap）不保证顺序。 二、常见实现类对比 实现类特点HashMap无序，键值允许 null，非线... ]]></description>
-    <pubDate>Tue, 05 Aug 2025 23:44:52 GMT</pubDate>
-  </item><item>
-    <title>变量声明与初始化</title>
-    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%88%9D%E5%A7%8B%E5%8C%96</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%88%9D%E5%A7%8B%E5%8C%96</guid>
-    <description><![CDATA[ 一、变量声明 变量声明就是告诉编译器你要使用一个什么类型的变量，并为它分配内存空间。声明变量的基本语法如下： 类型 变量名; 示例： int age; double price; char grade; 此时，age 是一个整型变量，price 是一个双精度浮点型变量，grade 是一个字符型变量。 二、变量初始化 变量初始化就是在声明变量的同时给它赋一个初始值。初始化可以在声明时进行，也可以在声明后赋值。 1. ]]></description>
-    <pubDate>Tue, 05 Aug 2025 23:44:52 GMT</pubDate>
-  </item><item>
-    <title>基本语法规范</title>
-    <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83</guid>
-    <description><![CDATA[ 基本语法规范详细讲解 1. ]]></description>
-    <pubDate>Tue, 05 Aug 2025 23:44:52 GMT</pubDate>
   </item>
     </channel>
   </rss>

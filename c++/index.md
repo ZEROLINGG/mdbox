@@ -16,14 +16,13 @@
 - 运算符与表达式 [[运算符与表达式]]
 - 输入输出流（`<iostream>`）[[输入输出流 iostream]]
 - 命名空间（`namespace`）[[命名空间]]
-- 类型转换（隐式与显式）
+- 类型转换（隐式与显式）[[类型转换]]
 
 **3. 控制结构**
 
-- 条件语句（if、switch）
-- 循环语句（for、while、do-while）
-- 跳转语句（break、continue、goto）
-- 范围for循环（C++11）
+- 条件语句（if、switch）[[条件语句]]
+- 循环语句（for、while、do-while）[[循环语句]]
+- 跳转语句（break、continue、goto）[[跳转语句]]
 
 **4. 函数**
 
