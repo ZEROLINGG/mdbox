@@ -2,7 +2,7 @@
 
 ## 介绍
 
-欢迎来到 `mdbox` 知识库！本仓库用于整理和归档多个技术方向的学习笔记，涵盖编程语言、网络安全、CTF、数据库等主题。所有内容都以 Markdown 形式编写，并适配 Obsidian 使用。
+欢迎来到 [`mdbox`](https://github.com/ZEROLINGG/mdbox) 知识库！本仓库用于整理和归档多个技术方向的学习笔记，涵盖编程语言、网络安全、CTF、数据库等主题。所有内容都以 Markdown 形式编写，并适配 Obsidian 使用。
 
 **当然也可以在线使用：** [`在线网址`](https://zerolingg.github.io/mdbox/python/)
 
