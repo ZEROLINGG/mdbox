@@ -6,65 +6,65 @@
       <description>Last 10 notes on Quartz 4</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Playwright</title>
-    <link>https://quartz.jzhao.xyz/C-Sharp/Playwright</link>
-    <guid>https://quartz.jzhao.xyz/C-Sharp/Playwright</guid>
-    <description><![CDATA[ 目录结构 核心基础 - 架构、生命周期、基本概念 元素定位与交互 - 选择器、Locator API、等待策略 媒体捕获 - 截图、视频录制、PDF生成 高级交互 - 表单、键鼠操作、拖拽 网络层操作 - 请求拦截、Mock、API测试 多页面管理 - 窗口、Frame、Shadow DOM 测试配置 - 浏览器配置、设备模拟、认证 调试与优化 - 性能监控、调试技巧、最佳实践 测试框架集成 - NUnit、 第一部分：核心基础 1.1 完整架构与生命周期 /// &lt;summary&gt; /// Playwright 完整架构说明 /// &lt;/summary&gt; public... ]]></description>
-    <pubDate>Fri, 22 Aug 2025 12:53:50 GMT</pubDate>
+    <title>ECC</title>
+    <link>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/ECC</link>
+    <guid>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/ECC</guid>
+    <description><![CDATA[ ECC (椭圆曲线加密) 完整指南 一、ECC 核心概念 在使用 ECC 之前，必须理解以下几个基本组件： 1. ]]></description>
+    <pubDate>Wed, 22 Oct 2025 03:57:20 GMT</pubDate>
+  </item><item>
+    <title>RSA</title>
+    <link>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/RSA</link>
+    <guid>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/RSA</guid>
+    <description><![CDATA[ RSA 加密完整指南 一、RSA 核心概念 在使用 RSA 之前，必须理解以下几个基本组件： 1. ]]></description>
+    <pubDate>Wed, 22 Oct 2025 03:55:04 GMT</pubDate>
+  </item><item>
+    <title>3DES</title>
+    <link>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/3DES</link>
+    <guid>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/3DES</guid>
+    <description><![CDATA[ 3DES 加密完整指南 一、3DES 核心概念 在使用 3DES 之前，必须理解以下几个基本组件： 1. ]]></description>
+    <pubDate>Wed, 22 Oct 2025 03:44:11 GMT</pubDate>
+  </item><item>
+    <title>AES</title>
+    <link>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/AES</link>
+    <guid>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/AES</guid>
+    <description><![CDATA[ AES加密完整指南 一、AES 核心概念 在使用 AES 之前，必须理解以下几个基本组件： 1. ]]></description>
+    <pubDate>Wed, 22 Oct 2025 03:43:45 GMT</pubDate>
   </item><item>
     <title>index</title>
-    <link>https://quartz.jzhao.xyz/c++/</link>
-    <guid>https://quartz.jzhao.xyz/c++/</guid>
-    <description><![CDATA[ C++ 系统学习目录 一、基础入门 1. C++概述与环境搭建 C++的历史与特点 编译器安装（GCC、Clang、MSVC） IDE选择与配置（Visual Studio、Code::Blocks、CLion、VS Code） 第一个C++程序 编译与链接过程 调试技巧与工具 2. ]]></description>
-    <pubDate>Fri, 22 Aug 2025 12:53:50 GMT</pubDate>
+    <link>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/</link>
+    <guid>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/</guid>
+    <description><![CDATA[ Python Cryptography库功能详解 Python的cryptography库是一个功能强大的密码学工具包，提供了现代密码学的各种实现。以下是其主要功能： 1. ]]></description>
+    <pubDate>Wed, 15 Oct 2025 02:24:06 GMT</pubDate>
   </item><item>
-    <title>函数模板</title>
-    <link>https://quartz.jzhao.xyz/c++/%E6%A8%A1%E6%9D%BF%E7%BC%96%E7%A8%8B/%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E6%A8%A1%E6%9D%BF%E7%BC%96%E7%A8%8B/%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF</guid>
-    <description><![CDATA[ 想象一下，你需要编写一个函数来交换两个变量的值。 对于 int 类型，你会这样写： void swapInt(int&amp; a, int&amp; b) { int temp = a; a = b; b = temp; } 对于 double 类型，你又得写一个： void swapDouble(double&amp; a, double&amp; b) { double temp = a; a = b; b = temp; } 对于 std::string 类型，还得再写一个… 你会发现，这些函数的逻辑完全一样，唯一的区别就是处理的数据类型不同。这导致了大量的代码冗余，并且难以维护。如果... ]]></description>
-    <pubDate>Fri, 22 Aug 2025 12:53:50 GMT</pubDate>
+    <title>index</title>
+    <link>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/</link>
+    <guid>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 15 Oct 2025 02:18:21 GMT</pubDate>
   </item><item>
-    <title>类模板</title>
-    <link>https://quartz.jzhao.xyz/c++/%E6%A8%A1%E6%9D%BF%E7%BC%96%E7%A8%8B/%E7%B1%BB%E6%A8%A1%E6%9D%BF</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E6%A8%A1%E6%9D%BF%E7%BC%96%E7%A8%8B/%E7%B1%BB%E6%A8%A1%E6%9D%BF</guid>
-    <description><![CDATA[ 一、类模板的核心概念 1. ]]></description>
-    <pubDate>Fri, 22 Aug 2025 12:53:50 GMT</pubDate>
+    <title>ida数据类型</title>
+    <link>https://quartz.jzhao.xyz/CTF/%E9%80%86%E5%90%91/ida-pro/ida%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B</link>
+    <guid>https://quartz.jzhao.xyz/CTF/%E9%80%86%E5%90%91/ida-pro/ida%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Thu, 09 Oct 2025 00:10:09 GMT</pubDate>
   </item><item>
-    <title>赋值运算符重载</title>
-    <link>https://quartz.jzhao.xyz/c++/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD</guid>
-    <description><![CDATA[ 一、赋值运算符基础 1.1 赋值运算符的基本形式 class AssignmentBasics { private: int* data; size_t size; std::string name; public: // 标准的拷贝赋值运算符 AssignmentBasics&amp; operator=(const AssignmentBasics&amp; other) { std::cout &lt;&lt; &quot;Copy assignment operator called\n&quot;; // 1. ]]></description>
-    <pubDate>Fri, 22 Aug 2025 12:53:50 GMT</pubDate>
+    <title>System.Diagnostics.Process 和 ProcessStartInfo</title>
+    <link>https://quartz.jzhao.xyz/C-Sharp/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/System.Diagnostics.Process-%E5%92%8C-ProcessStartInfo</link>
+    <guid>https://quartz.jzhao.xyz/C-Sharp/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/System.Diagnostics.Process-%E5%92%8C-ProcessStartInfo</guid>
+    <description><![CDATA[ 一、Process 类深入剖析 1.1 类层次结构和基本概念 // Process 类继承关系 public class Process : Component, IDisposable { // Process 代表系统中的一个进程 // 可以是本地进程或远程计算机上的进程 } 1.2 Process 类的所有属性详解 1.2.1 进程标识属性 public class ProcessIdentificationDemo { public void ShowIdentificationProperties() { Process process = Process.GetCurrentPro... ]]></description>
+    <pubDate>Thu, 11 Sep 2025 10:54:54 GMT</pubDate>
   </item><item>
-    <title>多态</title>
-    <link>https://quartz.jzhao.xyz/c++/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/%E5%A4%9A%E6%80%81</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/%E5%A4%9A%E6%80%81</guid>
-    <description><![CDATA[ 1. 多态的基本概念 多态（Polymorphism）是面向对象编程的核心特性之一，允许同一个接口表现出不同的行为。C++支持两种多态： 编译时多态（静态多态）：函数重载、运算符重载、模板 运行时多态（动态多态）：虚函数机制 2. ]]></description>
-    <pubDate>Fri, 22 Aug 2025 12:53:50 GMT</pubDate>
+    <title>文件结构</title>
+    <link>https://quartz.jzhao.xyz/CTF/_AAA/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80/%E5%9B%BE%E7%89%87/gif/%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84</link>
+    <guid>https://quartz.jzhao.xyz/CTF/_AAA/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80/%E5%9B%BE%E7%89%87/gif/%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84</guid>
+    <description><![CDATA[ GIF文件格式完整技术规范 一、GIF格式深度概述 1.1 历史与版本 GIF87a (1987年)：基础版本，支持静态图像 GIF89a (1989年)：增加透明度、动画、文本和应用程序扩展 1.2 文件结构层次 GIF文件 ├── 文件头部分 │ ├── 签名 (3字节) │ └── 版本 (3字节) ├── 逻辑屏幕部分 │ ├── 逻辑屏幕描述符 (7字节) │ └── 全局颜色表 (可选，3×2^(N+1)字节) ├── 数据流部分 (可重复) │ ├── 扩展块 (多种类型) │ └── 图像块 │ ├── 图像描述符 (10字节) │ ├── 局部颜色表 (可选) │ └── 图... ]]></description>
+    <pubDate>Tue, 02 Sep 2025 10:03:14 GMT</pubDate>
   </item><item>
-    <title>封装</title>
-    <link>https://quartz.jzhao.xyz/c++/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/%E5%B0%81%E8%A3%85</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/%E5%B0%81%E8%A3%85</guid>
-    <description><![CDATA[ C++ 封装详解 一、封装的基本概念 1.1 什么是封装 // 封装的核心思想：隐藏实现细节，提供公共接口 class EncapsulationBasics { private: // 数据隐藏：内部实现细节 int internalData; double sensitiveInfo; std::vector&lt;int&gt; privateBuffer; // 私有辅助方法 void validateData(int value) { if (value &lt; 0 || value &gt; 100) { throw std::invalid_argument(&quot;Val... ]]></description>
-    <pubDate>Fri, 22 Aug 2025 12:53:50 GMT</pubDate>
-  </item><item>
-    <title>抽象类与纯虚函数</title>
-    <link>https://quartz.jzhao.xyz/c++/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E7%BA%AF%E8%99%9A%E5%87%BD%E6%95%B0</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E7%BA%AF%E8%99%9A%E5%87%BD%E6%95%B0</guid>
-    <description><![CDATA[ 1. ]]></description>
-    <pubDate>Fri, 22 Aug 2025 12:53:50 GMT</pubDate>
-  </item><item>
-    <title>继承</title>
-    <link>https://quartz.jzhao.xyz/c++/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/%E7%BB%A7%E6%89%BF</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/%E7%BB%A7%E6%89%BF</guid>
-    <description><![CDATA[ 1. 继承的基本概念 继承是面向对象编程的核心特性之一，允许我们基于已有类创建新类，实现代码重用和建立类之间的层次关系。 基本语法 class 派生类名 : 继承方式 基类名 { // 派生类成员 }; 2. ]]></description>
-    <pubDate>Fri, 22 Aug 2025 12:53:50 GMT</pubDate>
-  </item><item>
-    <title>虚函数与虚表</title>
-    <link>https://quartz.jzhao.xyz/c++/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E8%99%9A%E8%A1%A8</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E8%99%9A%E8%A1%A8</guid>
-    <description><![CDATA[ 1. ]]></description>
-    <pubDate>Fri, 22 Aug 2025 12:53:50 GMT</pubDate>
+    <title>OpenSSL</title>
+    <link>https://quartz.jzhao.xyz/Linux/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/openssl/OpenSSL</link>
+    <guid>https://quartz.jzhao.xyz/Linux/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/openssl/OpenSSL</guid>
+    <description><![CDATA[ OpenSSL详细使用指南 一、OpenSSL简介 OpenSSL是一个强大的安全套接字层密码库，包含各种密码算法、常用的密钥和证书封装管理功能以及SSL协议。 安装OpenSSL # Ubuntu/Debian sudo apt-get install openssl # CentOS/RHEL/Fedora sudo yum install openssl # 查看版本 openssl version 二、基础命令结构 openssl [command] [options] [arguments] 查看帮助 # 查看所有可用命令 openssl help # 查看特定命令帮助 openss... ]]></description>
+    <pubDate>Tue, 02 Sep 2025 09:24:14 GMT</pubDate>
   </item>
     </channel>
   </rss>

@@ -19,6 +19,8 @@
 ### 1.1 完整架构与生命周期
 
 ```c#
+using Microsoft.Playwright;
+
 /// <summary>
 /// Playwright 完整架构说明
 /// </summary>
@@ -53,10 +55,10 @@ public class PlaywrightArchitecture
     public async Task CompleteLifecycleExample()
     {
         // 1. 初始化阶段
-        using var playwright = await Playwright.CreateAsync();
+        using IPlaywright playwright = await Playwright.CreateAsync();
         
         // 2. 浏览器启动配置
-        var browserOptions = new BrowserTypeLaunchOptions
+        BrowserTypeLaunchOptions browserOptions = new BrowserTypeLaunchOptions
         {
             // 基础配置
             Headless = false,                    // 是否无头模式
@@ -105,10 +107,10 @@ public class PlaywrightArchitecture
             }
         };
         
-        await using var browser = await playwright.Chromium.LaunchAsync(browserOptions);
+        await using IBrowser browser = await playwright.Chromium.LaunchAsync(browserOptions);
         
         // 3. 上下文配置
-        var contextOptions = new BrowserNewContextOptions
+        BrowserNewContextOptions contextOptions = new BrowserNewContextOptions
         {
             // 视口和显示
             ViewportSize = new ViewportSize { Width = 1920, Height = 1080 },
@@ -157,10 +159,10 @@ public class PlaywrightArchitecture
             ForcedColors = ForcedColors.Active
         };
         
-        var context = await browser.NewContextAsync(contextOptions);
+        IBrowserContext context = await browser.NewContextAsync(contextOptions);
         
         // 4. 页面创建和配置
-        var page = await context.NewPageAsync();
+        IPage page = await context.NewPageAsync();
         
         // 设置默认超时
         page.SetDefaultTimeout(60000);
@@ -2358,9 +2360,125 @@ public class ShadowDOMHandling
 }
 ```
 
-## 第七部分：测试配置
+## 第七部分：其他操作
 
-### 7.1 浏览器配置和设备模拟
+### 7.1 浏览器原生弹窗
+
+
+Playwright 提供了强大的API来处理各种浏览器原生弹窗（Dialog），包括 `alert`、`confirm`、`prompt` 以及 `beforeunload` 事件弹窗。
+
+#### 1. 弹窗类型介绍
+
+##### 浏览器原生弹窗类型：
+- **Alert** - 警告框，只有确定按钮
+- **Confirm** - 确认框，有确定和取消按钮
+- **Prompt** - 输入框，可以输入文本
+- **BeforeUnload** - 页面离开前的确认框
+
+#### 2. 基本处理方法
+
+##### 2.1 监听 Dialog 事件
+
+```csharp
+using Microsoft.Playwright;
+
+class DialogHandling
+{
+    public async Task HandleAlertDialog()
+    {
+        using var playwright = await Playwright.CreateAsync();
+        await using var browser = await playwright.Chromium.LaunchAsync();
+        var page = await browser.NewPageAsync();
+
+        // 注册 dialog 事件处理器
+        page.Dialog += async (_, dialog) =>
+        {
+            Console.WriteLine($"Dialog类型: {dialog.Type}");
+            Console.WriteLine($"Dialog消息: {dialog.Message}");
+            
+            // 接受对话框
+            await dialog.AcceptAsync();
+        };
+
+        // 触发 alert
+        await page.EvaluateAsync("() => alert('这是一个警告!')");
+    }
+}
+```
+
+##### 2.2 处理不同类型的弹窗
+
+```csharp
+public class DialogTypeHandling
+{
+    private IPage _page;
+
+    public async Task SetupDialogHandlers()
+    {
+        _page.Dialog += async (_, dialog) =>
+        {
+            switch (dialog.Type)
+            {
+                case "alert":
+                    await HandleAlert(dialog);
+                    break;
+                case "confirm":
+                    await HandleConfirm(dialog);
+                    break;
+                case "prompt":
+                    await HandlePrompt(dialog);
+                    break;
+                case "beforeunload":
+                    await HandleBeforeUnload(dialog);
+                    break;
+            }
+        };
+    }
+
+    private async Task HandleAlert(IDialog dialog)
+    {
+        Console.WriteLine($"Alert: {dialog.Message}");
+        await dialog.AcceptAsync();
+    }
+
+    private async Task HandleConfirm(IDialog dialog)
+    {
+        Console.WriteLine($"Confirm: {dialog.Message}");
+        
+        // 根据条件决定接受或拒绝
+        if (dialog.Message.Contains("删除"))
+        {
+            await dialog.DismissAsync(); // 取消
+        }
+        else
+        {
+            await dialog.AcceptAsync(); // 确定
+        }
+    }
+
+    private async Task HandlePrompt(IDialog dialog)
+    {
+        Console.WriteLine($"Prompt: {dialog.Message}");
+        Console.WriteLine($"默认值: {dialog.DefaultValue}");
+        
+        // 输入文本并接受
+        await dialog.AcceptAsync("输入的文本内容");
+    }
+
+    private async Task HandleBeforeUnload(IDialog dialog)
+    {
+        // beforeunload 通常自动处理
+        await dialog.AcceptAsync();
+    }
+}
+```
+
+
+
+
+## 第八部分：测试配置
+
+### 8.1 浏览器配置和设备模拟
 
 ```c#
 public class BrowserConfiguration
@@ -2582,7 +2700,7 @@ public class BrowserConfiguration
 }
 ```
 
-### 7.2 认证和状态管理
+### 8.2 认证和状态管理
 
 ```c#
 public class AuthenticationAndStateManagement
@@ -2608,7 +2726,8 @@ public class AuthenticationAndStateManagement
         await context.StorageStateAsync(new()
         {
             Path = "auth-state.json"
-        });
+        }); // new() {……}是.net9.0的语法，目标类型推断对象创建
+	    // new BrowserContextStorageStateOptions{……}
         
         await context.CloseAsync();
         
@@ -2616,7 +2735,8 @@ public class AuthenticationAndStateManagement
         // 创建新的上下文并加载保存的状态
         var authenticatedContext = await _browser.NewContextAsync(new()
         {
-            StorageState = "auth-state.json"
+            StorageStatePath = "auth-state.json"
+            // StorageState 需要json字符串
         });
         
         var authenticatedPage = await authenticatedContext.NewPageAsync();
@@ -2898,9 +3018,9 @@ public class AuthenticationAndStateManagement
 }
 ```
 
-## 第八部分：调试与优化
+## 第九部分：调试与优化
 
-### 8.1 调试技巧
+### 9.1 调试技巧
 
 ```c#
 public class DebuggingTechniques
@@ -3041,7 +3161,7 @@ public class DebuggingTechniques
 }
 ```
 
-### 8.2 最佳实践
+### 9.2 最佳实践
 
 ```c#
 public class BestPractices
@@ -3194,9 +3314,9 @@ public class BestPractices
 }
 ```
 
-## 第九部分：测试框架完整集成
+## 第10部分：测试框架完整集成
 
-### 9.1 NUnit 高级集成
+### 10.1 NUnit 高级集成
 
 ```c#
 [TestFixture]
