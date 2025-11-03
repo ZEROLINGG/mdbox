@@ -6,65 +6,65 @@
       <description>Last 10 notes on Quartz 4</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>ECC</title>
-    <link>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/ECC</link>
-    <guid>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/ECC</guid>
-    <description><![CDATA[ ECC (椭圆曲线加密) 完整指南 一、ECC 核心概念 在使用 ECC 之前，必须理解以下几个基本组件： 1. ]]></description>
-    <pubDate>Wed, 22 Oct 2025 03:57:20 GMT</pubDate>
-  </item><item>
-    <title>RSA</title>
-    <link>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/RSA</link>
-    <guid>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/RSA</guid>
-    <description><![CDATA[ RSA 加密完整指南 一、RSA 核心概念 在使用 RSA 之前，必须理解以下几个基本组件： 1. ]]></description>
-    <pubDate>Wed, 22 Oct 2025 03:55:04 GMT</pubDate>
-  </item><item>
-    <title>3DES</title>
-    <link>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/3DES</link>
-    <guid>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/3DES</guid>
-    <description><![CDATA[ 3DES 加密完整指南 一、3DES 核心概念 在使用 3DES 之前，必须理解以下几个基本组件： 1. ]]></description>
-    <pubDate>Wed, 22 Oct 2025 03:44:11 GMT</pubDate>
-  </item><item>
-    <title>AES</title>
-    <link>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/AES</link>
-    <guid>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/AES</guid>
-    <description><![CDATA[ AES加密完整指南 一、AES 核心概念 在使用 AES 之前，必须理解以下几个基本组件： 1. ]]></description>
-    <pubDate>Wed, 22 Oct 2025 03:43:45 GMT</pubDate>
-  </item><item>
-    <title>index</title>
-    <link>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/</link>
-    <guid>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/</guid>
-    <description><![CDATA[ Python Cryptography库功能详解 Python的cryptography库是一个功能强大的密码学工具包，提供了现代密码学的各种实现。以下是其主要功能： 1. ]]></description>
-    <pubDate>Wed, 15 Oct 2025 02:24:06 GMT</pubDate>
-  </item><item>
-    <title>index</title>
-    <link>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/</link>
-    <guid>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 15 Oct 2025 02:18:21 GMT</pubDate>
-  </item><item>
-    <title>ida数据类型</title>
-    <link>https://quartz.jzhao.xyz/CTF/%E9%80%86%E5%90%91/ida-pro/ida%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B</link>
-    <guid>https://quartz.jzhao.xyz/CTF/%E9%80%86%E5%90%91/ida-pro/ida%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 09 Oct 2025 00:10:09 GMT</pubDate>
+    <title>Playwright</title>
+    <link>https://quartz.jzhao.xyz/C-Sharp/Playwright</link>
+    <guid>https://quartz.jzhao.xyz/C-Sharp/Playwright</guid>
+    <description><![CDATA[ 目录结构 核心基础 - 架构、生命周期、基本概念 元素定位与交互 - 选择器、Locator API、等待策略 媒体捕获 - 截图、视频录制、PDF生成 高级交互 - 表单、键鼠操作、拖拽 网络层操作 - 请求拦截、Mock、API测试 多页面管理 - 窗口、Frame、Shadow DOM 测试配置 - 浏览器配置、设备模拟、认证 调试与优化 - 性能监控、调试技巧、最佳实践 测试框架集成 - NUnit、 第一部分：核心基础 1.1 完整架构与生命周期 using Microsoft.Playwright; /// &lt;summary&gt; /// Playwright 完整架构说明... ]]></description>
+    <pubDate>Mon, 03 Nov 2025 07:49:05 GMT</pubDate>
   </item><item>
     <title>System.Diagnostics.Process 和 ProcessStartInfo</title>
     <link>https://quartz.jzhao.xyz/C-Sharp/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/System.Diagnostics.Process-%E5%92%8C-ProcessStartInfo</link>
     <guid>https://quartz.jzhao.xyz/C-Sharp/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/System.Diagnostics.Process-%E5%92%8C-ProcessStartInfo</guid>
     <description><![CDATA[ 一、Process 类深入剖析 1.1 类层次结构和基本概念 // Process 类继承关系 public class Process : Component, IDisposable { // Process 代表系统中的一个进程 // 可以是本地进程或远程计算机上的进程 } 1.2 Process 类的所有属性详解 1.2.1 进程标识属性 public class ProcessIdentificationDemo { public void ShowIdentificationProperties() { Process process = Process.GetCurrentPro... ]]></description>
-    <pubDate>Thu, 11 Sep 2025 10:54:54 GMT</pubDate>
+    <pubDate>Mon, 03 Nov 2025 07:49:05 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://quartz.jzhao.xyz/CTF/Misc%E6%9D%82%E9%A1%B9/</link>
+    <guid>https://quartz.jzhao.xyz/CTF/Misc%E6%9D%82%E9%A1%B9/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Mon, 03 Nov 2025 07:49:05 GMT</pubDate>
   </item><item>
     <title>文件结构</title>
     <link>https://quartz.jzhao.xyz/CTF/_AAA/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80/%E5%9B%BE%E7%89%87/gif/%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84</link>
     <guid>https://quartz.jzhao.xyz/CTF/_AAA/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80/%E5%9B%BE%E7%89%87/gif/%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84</guid>
     <description><![CDATA[ GIF文件格式完整技术规范 一、GIF格式深度概述 1.1 历史与版本 GIF87a (1987年)：基础版本，支持静态图像 GIF89a (1989年)：增加透明度、动画、文本和应用程序扩展 1.2 文件结构层次 GIF文件 ├── 文件头部分 │ ├── 签名 (3字节) │ └── 版本 (3字节) ├── 逻辑屏幕部分 │ ├── 逻辑屏幕描述符 (7字节) │ └── 全局颜色表 (可选，3×2^(N+1)字节) ├── 数据流部分 (可重复) │ ├── 扩展块 (多种类型) │ └── 图像块 │ ├── 图像描述符 (10字节) │ ├── 局部颜色表 (可选) │ └── 图... ]]></description>
-    <pubDate>Tue, 02 Sep 2025 10:03:14 GMT</pubDate>
+    <pubDate>Mon, 03 Nov 2025 07:49:05 GMT</pubDate>
   </item><item>
-    <title>OpenSSL</title>
-    <link>https://quartz.jzhao.xyz/Linux/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/openssl/OpenSSL</link>
-    <guid>https://quartz.jzhao.xyz/Linux/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/openssl/OpenSSL</guid>
-    <description><![CDATA[ OpenSSL详细使用指南 一、OpenSSL简介 OpenSSL是一个强大的安全套接字层密码库，包含各种密码算法、常用的密钥和证书封装管理功能以及SSL协议。 安装OpenSSL # Ubuntu/Debian sudo apt-get install openssl # CentOS/RHEL/Fedora sudo yum install openssl # 查看版本 openssl version 二、基础命令结构 openssl [command] [options] [arguments] 查看帮助 # 查看所有可用命令 openssl help # 查看特定命令帮助 openss... ]]></description>
-    <pubDate>Tue, 02 Sep 2025 09:24:14 GMT</pubDate>
+    <title>文件结构</title>
+    <link>https://quartz.jzhao.xyz/CTF/_AAA/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80/%E5%9B%BE%E7%89%87/png/%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84</link>
+    <guid>https://quartz.jzhao.xyz/CTF/_AAA/%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80/%E5%9B%BE%E7%89%87/png/%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84</guid>
+    <description><![CDATA[ PNG文件结构详解（扩展版） 一、PNG文件概述 1.1 PNG格式历史与特点 核心特点： 优势： ├── 无损压缩（基于DEFLATE算法） ├── 支持透明度（Alpha通道） ├── 支持48位真彩色和16位灰度 ├── 渐进式显示（Adam7隔行扫描） ├── 伽马校正和颜色管理 ├── 完整性检查（CRC-32） └── 专利免费 劣势： ├── 不支持动画（需要APNG或MNG） ├── 文件体积通常比JPEG大（照片类） └── 不支持CMYK色彩空间 1.2 字节序规定 PNG统一使用网络字节序（Big-Endian）： // 4字节整数在文件中的存储顺序 uint32_t v... ]]></description>
+    <pubDate>Mon, 03 Nov 2025 07:49:05 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://quartz.jzhao.xyz/CTF/</link>
+    <guid>https://quartz.jzhao.xyz/CTF/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Mon, 03 Nov 2025 07:49:05 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/</link>
+    <guid>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/</guid>
+    <description><![CDATA[ Python Cryptography库功能详解 Python的cryptography库是一个功能强大的密码学工具包，提供了现代密码学的各种实现。以下是其主要功能： 1. ]]></description>
+    <pubDate>Mon, 03 Nov 2025 07:49:05 GMT</pubDate>
+  </item><item>
+    <title>3DES</title>
+    <link>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/3DES</link>
+    <guid>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/3DES</guid>
+    <description><![CDATA[ 3DES 加密完整指南 一、3DES 核心概念 在使用 3DES 之前，必须理解以下几个基本组件： 1. ]]></description>
+    <pubDate>Mon, 03 Nov 2025 07:49:05 GMT</pubDate>
+  </item><item>
+    <title>AES</title>
+    <link>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/AES</link>
+    <guid>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/AES</guid>
+    <description><![CDATA[ AES加密完整指南 一、AES 核心概念 在使用 AES 之前，必须理解以下几个基本组件： 1. ]]></description>
+    <pubDate>Mon, 03 Nov 2025 07:49:05 GMT</pubDate>
+  </item><item>
+    <title>ECC</title>
+    <link>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/ECC</link>
+    <guid>https://quartz.jzhao.xyz/CTF/%E5%AF%86%E7%A0%81%E5%AD%A6/python/%E5%B8%B8%E7%94%A8%E5%BA%93/Cryptography-(%E6%8E%A8%E8%8D%90)/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/ECC</guid>
+    <description><![CDATA[ ECC (椭圆曲线加密) 完整指南 一、ECC 核心概念 在使用 ECC 之前，必须理解以下几个基本组件： 1. ]]></description>
+    <pubDate>Mon, 03 Nov 2025 07:49:05 GMT</pubDate>
   </item>
     </channel>
   </rss>
