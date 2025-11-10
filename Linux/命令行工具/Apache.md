@@ -1826,3 +1826,1427 @@ sudo tar -czf $BACKUP_DIR/$BACKUP_FILE \
 find $BACKUP_DIR -name "*.tar.gz" -mtime +30 -delete
 
 echo "Backup completed: $BACKUP_DIR/$BACKUP_FILE"
+```
+
+### 十四、配置文件详细讲解
+
+#### 1. apache2.conf - 主配置文件
+
+Apache的核心配置文件，控制全局行为和默认设置。
+
+##### 1.1 基本服务器配置
+```apache
+# 服务器根目录
+ServerRoot "/etc/apache2"
+
+# 互斥锁文件配置
+Mutex file:${APACHE_LOCK_DIR} default
+
+# PID文件位置
+PidFile ${APACHE_PID_FILE}
+
+# 请求超时时间（秒）
+Timeout 300
+
+# 保持连接设置
+KeepAlive On                    # 启用持久连接
+MaxKeepAliveRequests 100        # 每个连接的最大请求数
+KeepAliveTimeout 5              # 持久连接超时时间（秒）
+```
+
+##### 1.2 用户和组配置
+```apache
+# Apache运行用户和组
+User ${APACHE_RUN_USER}         # 通常为 www-data
+Group ${APACHE_RUN_GROUP}       # 通常为 www-data
+
+# 实际值在 /etc/apache2/envvars 中定义
+# export APACHE_RUN_USER=www-data
+# export APACHE_RUN_GROUP=www-data
+```
+
+##### 1.3 主机名查找
+```apache
+# 禁用主机名查找（提高性能）
+HostnameLookups Off
+
+# 如果启用，Apache会对每个连接进行反向DNS查询
+# 这会显著降低性能，除非日志分析确实需要主机名
+```
+
+##### 1.4 错误日志配置
+```apache
+# 全局错误日志
+ErrorLog ${APACHE_LOG_DIR}/error.log
+
+# 日志级别（从低到高）：
+# emerg alert crit error warn notice info debug trace1-8
+LogLevel warn
+
+# 针对特定模块设置日志级别
+# LogLevel warn ssl:info rewrite:trace3
+```
+
+##### 1.5 模块加载
+```apache
+# 包含已启用的模块配置
+IncludeOptional mods-enabled/*.load
+IncludeOptional mods-enabled/*.conf
+
+# 单个模块示例
+# LoadModule rewrite_module modules/mod_rewrite.so
+```
+
+##### 1.6 默认目录权限
+```apache
+# 拒绝所有目录的访问（默认拒绝策略）
+<Directory />
+    Options FollowSymLinks
+    AllowOverride None
+    Require all denied
+</Directory>
+
+# /usr/share目录配置
+<Directory /usr/share>
+    AllowOverride None
+    Require all granted
+</Directory>
+
+# Web根目录配置
+<Directory /var/www/>
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+</Directory>
+```
+
+**Options指令说明：**
+- `None` - 禁用所有选项
+- `All` - 启用除MultiViews外的所有选项
+- `Indexes` - 允许目录列表（无索引文件时）
+- `FollowSymLinks` - 允许跟随符号链接
+- `SymLinksIfOwnerMatch` - 仅当链接和目标所有者相同时跟随
+- `ExecCGI` - 允许执行CGI脚本
+- `MultiViews` - 允许内容协商的多视图
+- `Includes` - 允许服务器端包含（SSI）
+- `IncludesNOEXEC` - 允许SSI但禁用#exec和#include
+
+**AllowOverride指令说明：**
+- `None` - 禁用.htaccess文件
+- `All` - 允许.htaccess覆盖所有指令
+- `AuthConfig` - 允许认证指令
+- `FileInfo` - 允许文档类型控制指令
+- `Indexes` - 允许目录索引控制
+- `Limit` - 允许访问控制指令
+- `Options` - 允许Options指令
+
+**Require指令说明：**
+- `Require all granted` - 允许所有访问
+- `Require all denied` - 拒绝所有访问
+- `Require ip 192.168.1.0/24` - 允许特定IP/网段
+- `Require host example.com` - 允许特定主机名
+- `Require valid-user` - 需要有效认证用户
+- `Require user admin` - 需要特定用户
+- `Require group admins` - 需要特定用户组
+
+##### 1.7 访问文件名配置
+```apache
+# 设置默认索引文件（按优先级）
+<IfModule dir_module>
+    DirectoryIndex index.html index.htm index.php
+</IfModule>
+
+# 如果目录中存在这些文件，Apache会自动显示
+# 否则显示目录列表（如果Indexes选项启用）
+```
+
+##### 1.8 保护敏感文件
+```apache
+# 拒绝访问.ht开头的文件（如.htaccess、.htpasswd）
+<FilesMatch "^\.ht">
+    Require all denied
+</FilesMatch>
+
+# 保护备份文件和配置文件
+<FilesMatch "\.(bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist)$">
+    Require all denied
+</FilesMatch>
+
+# 保护版本控制目录
+<DirectoryMatch "^/.*/\.(git|svn|hg)/">
+    Require all denied
+</DirectoryMatch>
+```
+
+##### 1.9 日志格式定义
+```apache
+# Common日志格式
+LogFormat "%h %l %u %t \"%r\" %>s %b" common
+
+# Combined日志格式（包含Referer和User-Agent）
+LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined
+
+# 带响应时间的日志格式
+LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\" %D" custom
+
+# Virtual Host日志格式
+LogFormat "%v:%p %h %l %u %t \"%r\" %>s %b" vhost_combined
+
+# 字段含义：
+# %h - 客户端IP地址
+# %l - 客户端身份（通常为"-"）
+# %u - 认证用户名
+# %t - 时间戳
+# %r - 请求行（方法 URL 协议）
+# %>s - 最终状态码
+# %b - 响应字节数（不含头）
+# %B - 响应字节数（0代替"-"）
+# %D - 请求处理时间（微秒）
+# %T - 请求处理时间（秒）
+# %v - 虚拟主机名称
+# %p - 服务器端口
+# %{Referer}i - 引荐页面
+# %{User-Agent}i - 用户代理字符串
+# %{X-Forwarded-For}i - 代理转发的客户端IP
+```
+
+##### 1.10 包含其他配置文件
+```apache
+# 包含端口配置
+Include ports.conf
+
+# 包含已启用的配置片段
+IncludeOptional conf-enabled/*.conf
+
+# 包含已启用的站点配置
+IncludeOptional sites-enabled/*.conf
+
+# Include vs IncludeOptional：
+# Include - 文件必须存在，否则启动失败
+# IncludeOptional - 文件可以不存在
+```
+
+---
+
+#### 2. ports.conf - 端口配置文件
+
+控制Apache监听的端口。
+
+```apache
+# 监听HTTP端口
+Listen 80
+
+# 如果SSL模块启用，监听HTTPS端口
+<IfModule ssl_module>
+    Listen 443
+</IfModule>
+
+<IfModule mod_gnutls.c>
+    Listen 443
+</IfModule>
+
+# 监听特定IP和端口
+# Listen 192.168.1.100:80
+# Listen 127.0.0.1:8080
+
+# 监听多个端口
+# Listen 80
+# Listen 8080
+# Listen 8443
+```
+
+**配置说明：**
+- `Listen 80` - 监听所有网络接口的80端口
+- `Listen 192.168.1.100:80` - 仅监听特定IP的端口
+- `Listen [::]:80` - 监听IPv6
+- 修改后需要重启Apache生效
+
+---
+
+#### 3. envvars - 环境变量文件
+
+定义Apache运行时使用的环境变量。
+
+```bash
+# Apache运行用户和组
+export APACHE_RUN_USER=www-data
+export APACHE_RUN_GROUP=www-data
+
+# PID文件位置
+export APACHE_PID_FILE=/var/run/apache2/apache2.pid
+
+# 运行目录
+export APACHE_RUN_DIR=/var/run/apache2
+
+# 锁文件目录
+export APACHE_LOCK_DIR=/var/lock/apache2
+
+# 日志目录
+export APACHE_LOG_DIR=/var/log/apache2
+
+# 语言设置
+export LANG=C
+
+# 启用core dump（调试用）
+# ulimit -c unlimited
+
+# 启动参数
+# export APACHE_ARGUMENTS=""
+
+# 自定义环境变量
+# export MY_APP_ENV=production
+```
+
+---
+
+#### 4. 虚拟主机配置文件详解
+
+#### 4.1 000-default.conf - 默认HTTP站点
+
+```apache
+<VirtualHost *:80>
+    # ====== 基本标识信息 ======
+    
+    # 服务器名称（主域名）
+    ServerName example.com
+    
+    # 服务器别名（其他域名）
+    ServerAlias www.example.com *.example.com
+    
+    # 管理员邮箱
+    ServerAdmin webmaster@example.com
+    
+    # ====== 目录配置 ======
+    
+    # 网站根目录
+    DocumentRoot /var/www/html
+    
+    # 目录访问控制
+    <Directory /var/www/html>
+        # 选项配置
+        Options Indexes FollowSymLinks MultiViews
+        
+        # 允许.htaccess覆盖
+        AllowOverride All
+        
+        # 访问控制
+        Require all granted
+        
+        # 默认索引文件
+        DirectoryIndex index.html index.php
+    </Directory>
+    
+    # ====== 特殊目录配置 ======
+    
+    # CGI脚本目录
+    ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+    <Directory "/usr/lib/cgi-bin">
+        AllowOverride None
+        Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+        Require all granted
+    </Directory>
+    
+    # 受限访问目录
+    <Directory /var/www/html/admin>
+        Options -Indexes
+        AllowOverride None
+        AuthType Basic
+        AuthName "Admin Area"
+        AuthUserFile /etc/apache2/.htpasswd
+        Require valid-user
+    </Directory>
+    
+    # ====== 日志配置 ======
+    
+    # 错误日志
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    
+    # 访问日志
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+    
+    # 日志级别（针对此虚拟主机）
+    LogLevel warn
+    
+    # ====== URL重写 ======
+    
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteBase /
+        
+        # 强制HTTPS
+        # RewriteCond %{HTTPS} off
+        # RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+    </IfModule>
+    
+    # ====== 别名配置 ======
+    
+    # 静态文件别名
+    Alias /static /var/www/static
+    <Directory /var/www/static>
+        Require all granted
+    </Directory>
+    
+    # ====== 代理配置 ======
+    
+    # 反向代理到后端应用
+    # ProxyPreserveHost On
+    # ProxyPass /api http://localhost:3000/api
+    # ProxyPassReverse /api http://localhost:3000/api
+    
+    # ====== 错误页面 ======
+    
+    # 自定义错误页面
+    ErrorDocument 404 /errors/404.html
+    ErrorDocument 500 /errors/500.html
+    
+    # ====== 安全头 ======
+    
+    <IfModule mod_headers.c>
+        Header always set X-Frame-Options "SAMEORIGIN"
+        Header always set X-Content-Type-Options "nosniff"
+        Header always set X-XSS-Protection "1; mode=block"
+    </IfModule>
+    
+    # ====== 压缩配置 ======
+    
+    <IfModule mod_deflate.c>
+        AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+        AddOutputFilterByType DEFLATE application/javascript application/json
+    </IfModule>
+    
+    # ====== 缓存配置 ======
+    
+    <IfModule mod_expires.c>
+        ExpiresActive On
+        ExpiresByType image/jpeg "access plus 1 year"
+        ExpiresByType text/css "access plus 1 month"
+    </IfModule>
+</VirtualHost>
+```
+
+##### 4.2 default-ssl.conf - 默认HTTPS站点
+
+```apache
+<IfModule mod_ssl.c>
+    <VirtualHost *:443>
+        ServerName example.com
+        ServerAdmin admin@example.com
+        DocumentRoot /var/www/html
+        
+        # ====== SSL引擎配置 ======
+        SSLEngine on
+        
+        # ====== 证书文件 ======
+        
+        # 服务器证书
+        SSLCertificateFile /etc/ssl/certs/server.crt
+        
+        # 服务器私钥
+        SSLCertificateKeyFile /etc/ssl/private/server.key
+        
+        # 证书链文件（中间证书）
+        SSLCertificateChainFile /etc/ssl/certs/chain.crt
+        
+        # 或使用完整证书文件（包含证书链）
+        # SSLCertificateFile /etc/ssl/certs/fullchain.pem
+        
+        # CA证书文件（用于客户端证书验证）
+        # SSLCACertificateFile /etc/ssl/certs/ca-bundle.crt
+        
+        # ====== SSL协议配置 ======
+        
+        # 禁用不安全的协议
+        SSLProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1
+        
+        # 仅允许TLS 1.2和1.3
+        # SSLProtocol -all +TLSv1.2 +TLSv1.3
+        
+        # ====== 加密套件配置 ======
+        
+        # 推荐的加密套件（兼容性）
+        SSLCipherSuite HIGH:!aNULL:!MD5:!3DES
+        
+        # 更严格的加密套件（仅现代浏览器）
+        # SSLCipherSuite ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384
+        
+        # 优先使用服务器加密套件顺序
+        SSLHonorCipherOrder on
+        
+        # ====== 会话缓存 ======
+        
+        # SSL会话缓存（提高性能）
+        SSLSessionCache shmcb:${APACHE_RUN_DIR}/ssl_scache(512000)
+        SSLSessionCacheTimeout 300
+        
+        # ====== OCSP Stapling（证书状态检查）======
+        
+        SSLUseStapling on
+        SSLStaplingCache shmcb:${APACHE_RUN_DIR}/ssl_stapling(32768)
+        SSLStaplingResponderTimeout 5
+        SSLStaplingReturnResponderErrors off
+        
+        # ====== 客户端证书验证 ======
+        
+        # 不要求客户端证书
+        # SSLVerifyClient none
+        
+        # 可选客户端证书
+        # SSLVerifyClient optional
+        
+        # 要求客户端证书
+        # SSLVerifyClient require
+        # SSLVerifyDepth 10
+        
+        # ====== DH参数（提高安全性）======
+        
+        # 自定义DH参数
+        # SSLOpenSSLConfCmd DHParameters /etc/ssl/dhparam.pem
+        
+        # ====== HSTS配置 ======
+        
+        <IfModule mod_headers.c>
+            # HTTP严格传输安全
+            Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+            
+            # 其他安全头
+            Header always set X-Frame-Options "SAMEORIGIN"
+            Header always set X-Content-Type-Options "nosniff"
+            Header always set X-XSS-Protection "1; mode=block"
+        </IfModule>
+        
+        # ====== SSL日志 ======
+        
+        ErrorLog ${APACHE_LOG_DIR}/ssl-error.log
+        CustomLog ${APACHE_LOG_DIR}/ssl-access.log combined
+        
+        # SSL专用日志格式
+        # CustomLog ${APACHE_LOG_DIR}/ssl-request.log "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
+        
+        # ====== 目录配置 ======
+        
+        <Directory /var/www/html>
+            Options -Indexes +FollowSymLinks
+            AllowOverride All
+            Require all granted
+        </Directory>
+        
+        # ====== SSL优化 ======
+        
+        # 禁用SSL压缩（防止CRIME攻击）
+        SSLCompression off
+        
+        # 启用HTTP/2（提高性能）
+        Protocols h2 http/1.1
+        
+    </VirtualHost>
+</IfModule>
+
+# ====== 全局SSL配置 ======
+
+# 互斥锁配置（进程间同步）
+# <IfModule mod_ssl.c>
+#     SSLMutex file:${APACHE_LOCK_DIR}/ssl_mutex
+# </IfModule>
+
+# 随机数种子
+# <IfModule mod_ssl.c>
+#     SSLRandomSeed startup builtin
+#     SSLRandomSeed startup file:/dev/urandom 512
+#     SSLRandomSeed connect builtin
+#     SSLRandomSeed connect file:/dev/urandom 512
+# </IfModule>
+```
+
+---
+
+#### 5. 模块配置文件详解
+
+##### 5.1 mod_rewrite.conf - URL重写模块
+
+```apache
+<IfModule mod_rewrite.c>
+    # 启用重写引擎
+    RewriteEngine On
+    
+    # 设置重写日志级别（0-9，0=禁用，9=详细）
+    # 仅用于调试，生产环境应禁用
+    # RewriteLog /var/log/apache2/rewrite.log
+    # RewriteLogLevel 3
+    
+    # 重写规则继承（虚拟主机）
+    RewriteOptions Inherit
+</IfModule>
+```
+
+**常用重写规则示例：**
+
+```apache
+# 在虚拟主机或.htaccess中使用
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # 1. 强制HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+    
+    # 2. 强制www
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+    
+    # 3. 去除www
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+    
+    # 4. URL美化（移除.php扩展名）
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.*)$ $1.php [L]
+    
+    # 5. 重定向旧URL到新URL
+    RewriteRule ^old-page\.html$ /new-page.html [R=301,L]
+    RewriteRule ^products/(.*)$ /items/$1 [R=301,L]
+    
+    # 6. 阻止访问隐藏文件
+    RewriteRule "(^|/)\.(?!well-known)" - [F]
+    
+    # 7. 阻止特定User-Agent
+    RewriteCond %{HTTP_USER_AGENT} (badbot|scraper) [NC]
+    RewriteRule .* - [F,L]
+    
+    # 8. 防止图片盗链
+    RewriteCond %{HTTP_REFERER} !^$
+    RewriteCond %{HTTP_REFERER} !^https?://(www\.)?example\.com [NC]
+    RewriteRule \.(jpg|jpeg|png|gif)$ - [F]
+    
+    # 9. 代理特定路径到后端
+    RewriteRule ^api/(.*)$ http://localhost:3000/api/$1 [P,L]
+    
+    # 10. 维护模式
+    RewriteCond %{REQUEST_URI} !^/maintenance\.html$
+    RewriteCond %{REMOTE_ADDR} !^192\.168\.1\.
+    RewriteRule .* /maintenance.html [R=503,L]
+</IfModule>
+```
+
+**RewriteCond标志说明：**
+- `[NC]` - 不区分大小写
+- `[OR]` - 或条件（默认是AND）
+
+**RewriteRule标志说明：**
+- `[L]` - Last（停止处理后续规则）
+- `[R=301]` - 永久重定向
+- `[R=302]` - 临时重定向
+- `[F]` - Forbidden（返回403）
+- `[G]` - Gone（返回410）
+- `[P]` - Proxy（代理请求）
+- `[QSA]` - 追加查询字符串
+- `[NE]` - 不转义输出
+- `[PT]` - Pass Through（传递给其他模块）
+
+##### 5.2 mod_security.conf - Web应用防火墙
+
+```apache
+<IfModule security2_module>
+    # 数据目录
+    SecDataDir /var/cache/modsecurity
+    
+    # 规则引擎模式
+    SecRuleEngine On              # 启用（阻止攻击）
+    # SecRuleEngine DetectionOnly # 仅检测（不阻止）
+    # SecRuleEngine Off           # 关闭
+    
+    # 请求体访问
+    SecRequestBodyAccess On
+    SecRequestBodyLimit 13107200            # 最大请求体大小（字节）
+    SecRequestBodyNoFilesLimit 131072       # 不包含文件上传的请求体限制
+    
+    # 响应体访问
+    SecResponseBodyAccess On
+    SecResponseBodyMimeType text/plain text/html text/xml
+    SecResponseBodyLimit 524288             # 最大响应体大小
+    
+    # 临时目录
+    SecTmpDir /tmp/
+    
+    # 审计日志
+    SecAuditEngine RelevantOnly            # 仅记录相关事件
+    SecAuditLogRelevantStatus "^(?:5|4(?!04))"
+    SecAuditLogParts ABIJDEFHZ
+    SecAuditLogType Serial
+    SecAuditLog /var/log/apache2/modsec_audit.log
+    
+    # 包含核心规则
+    IncludeOptional /etc/modsecurity/*.conf
+    IncludeOptional /etc/modsecurity/crs/crs-setup.conf
+    IncludeOptional /etc/modsecurity/crs/rules/*.conf
+</IfModule>
+```
+
+##### 5.3 mod_deflate.conf - 压缩模块
+
+```apache
+<IfModule mod_deflate.c>
+    # 压缩文本类型
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+    
+    # 排除已压缩的文件
+    SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|zip|gz|rar|bz2|7z|pdf)$ no-gzip
+    
+    # 排除旧版浏览器
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
+    
+    # 确保代理正确缓存
+    Header append Vary User-Agent env=!dont-vary
+    
+    # 压缩级别（1-9，9最高压缩率但最慢）
+    DeflateCompressionLevel 6
+    
+    # 内存级别（1-9）
+    DeflateMemLevel 9
+    
+    # 窗口大小（9-15）
+    DeflateWindowSize 15
+</IfModule>
+```
+
+---
+
+#### 6. .htaccess文件详解
+
+`.htaccess`是目录级配置文件，允许在不重启Apache的情况下更改配置。
+
+**注意：** 需要在虚拟主机中设置 `AllowOverride All` 才能使用。
+
+```apache
+# ====== URL重写 ======
+
+RewriteEngine On
+RewriteBase /
+
+# 强制HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# ====== 访问控制 ======
+
+# 基于IP的访问控制
+Require ip 192.168.1.0/24
+Require ip 10.0.0.5
+
+# 拒绝特定IP
+<RequireAll>
+    Require all granted
+    Require not ip 10.0.0.1
+</RequireAll>
+
+# 基于密码的认证
+AuthType Basic
+AuthName "Restricted Area"
+AuthUserFile /etc/apache2/.htpasswd
+Require valid-user
+
+# ====== 错误页面 ======
+
+ErrorDocument 404 /errors/404.html
+ErrorDocument 403 /errors/403.html
+ErrorDocument 500 /errors/500.html
+
+# ====== 目录选项 ======
+
+# 禁用目录列表
+Options -Indexes
+
+# 启用符号链接跟随
+Options +FollowSymLinks
+
+# 禁用MultiViews
+Options -MultiViews
+
+# ====== 文件保护 ======
+
+# 保护特定文件
+<Files "config.php">
+    Require all denied
+</Files>
+
+# 保护文件扩展名
+<FilesMatch "\.(bak|config|sql|log)$">
+    Require all denied
+</FilesMatch>
+
+# ====== MIME类型 ======
+
+AddType application/x-httpd-php .php .phtml
+AddType text/html .shtml
+AddHandler server-parsed .shtml
+
+# ====== 压缩 ======
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+    AddOutputFilterByType DEFLATE application/javascript
+</IfModule>
+
+# ====== 缓存控制 ======
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+# ====== 安全头 ======
+
+<IfModule mod_headers.c>
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ====== 字符编码 ======
+
+AddDefaultCharset UTF-8
+
+# ====== PHP配置（如果允许）======
+
+php_flag display_errors Off
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_value max_execution_time 30
+php_value memory_limit 128M
+
+# ====== 禁用PHP执行（上传目录）======
+
+# 在上传目录中禁用PHP
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>
+
+# 或使用
+php_flag engine off
+AddType text/plain .php .php3 .phtml
+
+# ====== 性能优化 ======
+
+# 启用KeepAlive
+Header set Connection keep-alive
+
+# ETags
+FileETag None
+Header unset ETag
+
+# ====== CORS配置 ======
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type"
+</IfModule>
+
+# ====== 限制HTTP方法 ======
+
+<LimitExcept GET POST HEAD>
+    Require all denied
+</LimitExcept>
+```
+
+---
+
+#### 7. MPM配置文件详解
+
+多处理模块（Multi-Processing Module）控制Apache如何处理并发请求。
+
+##### 7.1 mpm_prefork.conf - 预派生模式
+
+**特点：** 多进程，每个进程单线程，兼容性最好但资源占用较大。
+
+```apache
+<IfModule mpm_prefork_module>
+    # 启动时创建的子进程数
+    StartServers             5
+    
+    # 最小空闲子进程数
+    # 如果空闲进程少于此值，会创建新进程
+    MinSpareServers          5
+    
+    # 最大空闲子进程数
+    # 如果空闲进程超过此值，会终止多余进程
+    MaxSpareServers          10
+    
+    # 同时处理的最大请求数（即最大子进程数）
+    MaxRequestWorkers        150
+    
+    # 每个子进程处理的最大请求数后重启
+    # 0表示永不重启（推荐设置为非0值防止内存泄漏）
+    MaxConnectionsPerChild   10000
+    
+    # 服务器负载的绝对最大值
+    # ServerLimit            256
+</IfModule>
+```
+
+**计算公式：**
+- 内存需求 ≈ MaxRequestWorkers × 每个进程内存使用量
+- 示例：如果每个Apache进程使用20MB内存
+  - MaxRequestWorkers = 150
+  - 总内存需求 ≈ 150 × 20MB = 3GB
+
+**推荐配置（不同场景）：**
+
+```apache
+# 小型服务器（1-2GB RAM）
+StartServers             2
+MinSpareServers          2
+MaxSpareServers          5
+MaxRequestWorkers        50
+MaxConnectionsPerChild   3000
+
+# 中型服务器（4-8GB RAM）
+StartServers             5
+MinSpareServers          5
+MaxSpareServers          10
+MaxRequestWorkers        150
+MaxConnectionsPerChild   10000
+
+# 大型服务器（16GB+ RAM）
+StartServers             10
+MinSpareServers          10
+MaxSpareServers          20
+MaxRequestWorkers        400
+MaxConnectionsPerChild   10000
+```
+
+##### 7.2 mpm_worker.conf - 工作者模式
+
+**特点：** 多进程多线程，性能好，资源占用适中。
+
+```apache
+<IfModule mpm_worker_module>
+    # 启动时创建的子进程数
+    StartServers             2
+    
+    # 最小空闲线程数
+    MinSpareThreads          25
+    
+    # 最大空闲线程数
+    MaxSpareThreads          75
+    
+    # 每个子进程的线程数
+    ThreadsPerChild          25
+    
+    # 最大并发连接数
+    # MaxRequestWorkers = ServerLimit × ThreadsPerChild
+    MaxRequestWorkers        150
+    
+    # 每个子进程处理的最大请求数
+    MaxConnectionsPerChild   0
+    
+    # 最大子进程数限制
+    # ServerLimit            16
+    
+    # 每个子进程的最大线程数限制
+    # ThreadLimit            64
+</IfModule>
+```
+
+**计算示例：**
+```
+如果 ThreadsPerChild = 25，ServerLimit = 16
+则 MaxRequestWorkers 最大可以设置为：16 × 25 = 400
+```
+
+**推荐配置：**
+
+```apache
+# 中型服务器（4-8GB RAM）
+StartServers             3
+MinSpareThreads          25
+MaxSpareThreads          75
+ThreadsPerChild          25
+MaxRequestWorkers        150
+MaxConnectionsPerChild   10000
+
+# 高流量服务器（16GB+ RAM）
+StartServers             4
+MinSpareThreads          50
+MaxSpareThreads          150
+ThreadsPerChild          50
+MaxRequestWorkers        400
+MaxConnectionsPerChild   10000
+ServerLimit              16
+```
+
+##### 7.3 mpm_event.conf - 事件模式（推荐）
+
+**特点：** 类似worker但处理Keep-Alive更高效，推荐用于高性能场景。
+
+```apache
+<IfModule mpm_event_module>
+    # 启动时创建的子进程数
+    StartServers             2
+    
+    # 最小空闲线程数
+    MinSpareThreads          25
+    
+    # 最大空闲线程数
+    MaxSpareThreads          75
+    
+    # 每个子进程的线程数
+    ThreadsPerChild          25
+    
+    # 最大并发连接数
+    MaxRequestWorkers        150
+    
+    # 每个子进程处理的最大请求数
+    MaxConnectionsPerChild   0
+    
+    # 每个子进程的最大线程数限制
+    ThreadLimit              64
+    
+    # 最大子进程数限制
+    # ServerLimit            16
+    
+    # 异步请求处理线程数
+    # AsyncRequestWorkerFactor 2
+</IfModule>
+```
+
+**Event MPM专用参数：**
+- `AsyncRequestWorkerFactor` - 异步连接处理因子
+  - 最大并发连接数 = MaxRequestWorkers × AsyncRequestWorkerFactor
+  - 默认值为2，适用于Keep-Alive连接多的场景
+
+**高性能配置示例：**
+
+```apache
+<IfModule mpm_event_module>
+    StartServers             3
+    MinSpareThreads          50
+    MaxSpareThreads          150
+    ThreadsPerChild          50
+    ThreadLimit              64
+    MaxRequestWorkers        400
+    MaxConnectionsPerChild   10000
+    ServerLimit              16
+    AsyncRequestWorkerFactor 2
+</IfModule>
+```
+
+**切换MPM模块：**
+
+```bash
+# 查看当前MPM
+apache2ctl -V | grep -i mpm
+
+# 禁用当前MPM
+sudo a2dismod mpm_prefork
+
+# 启用新的MPM
+sudo a2enmod mpm_event
+
+# 重启Apache
+sudo systemctl restart apache2
+```
+
+---
+
+#### 8. 性能调优参数总结
+
+#### 8.1 全局性能参数（apache2.conf）
+
+```apache
+# ====== 连接管理 ======
+
+# 请求超时时间（秒）
+Timeout 300
+
+# 启用持久连接
+KeepAlive On
+
+# 持久连接的最大请求数
+MaxKeepAliveRequests 100
+
+# 持久连接超时时间（秒）
+# 建议设置为2-5秒以提高并发能力
+KeepAliveTimeout 5
+
+# ====== 请求限制 ======
+
+# 限制请求体大小（字节）
+LimitRequestBody 10485760        # 10MB
+
+# 限制请求头字段数量
+LimitRequestFields 100
+
+# 限制请求头字段大小（字节）
+LimitRequestFieldSize 8190
+
+# 限制请求行大小（字节）
+LimitRequestLine 8190
+
+# ====== 主机名查找 ======
+
+# 禁用DNS反向查找（提高性能）
+HostnameLookups Off
+
+# ====== 文件系统访问 ======
+
+# 禁用符号链接所有权匹配检查（提高性能）
+# Options +FollowSymLinks
+
+# 启用文件系统缓存
+EnableMMAP On
+EnableSendfile On
+```
+
+##### 8.2 服务器资源配置建议
+
+**小型网站（共享主机级别）：**
+- 内存：1-2GB
+- 预期并发：20-50
+```apache
+MaxRequestWorkers        50
+KeepAliveTimeout         2
+MaxConnectionsPerChild   3000
+```
+
+**中型网站（VPS/小型服务器）：**
+- 内存：4-8GB
+- 预期并发：100-200
+```apache
+MaxRequestWorkers        150
+KeepAliveTimeout         3
+MaxConnectionsPerChild   5000
+```
+
+**大型网站（专用服务器）：**
+- 内存：16GB+
+- 预期并发：500+
+```apache
+MaxRequestWorkers        400
+KeepAliveTimeout         5
+MaxConnectionsPerChild   10000
+```
+
+---
+
+#### 9. 安全配置参数详解
+
+##### 9.1 服务器标识（apache2.conf或security.conf）
+
+```apache
+# 服务器标识信息控制
+# Prod - 仅显示 "Apache"
+# Major - 显示 "Apache/2"
+# Minor - 显示 "Apache/2.4"
+# Min - 显示 "Apache/2.4.X"
+# OS - 显示 "Apache/2.4.X (Debian)"
+# Full - 显示完整信息（默认，不安全）
+ServerTokens Prod
+
+# 关闭错误页面中的服务器签名
+ServerSignature Off
+
+# 禁用TRACE方法（防止XST攻击）
+TraceEnable Off
+```
+
+##### 9.2 访问控制最佳实践
+
+```apache
+# 默认拒绝策略
+<Directory />
+    Options None
+    AllowOverride None
+    Require all denied
+</Directory>
+
+# 仅开放需要的目录
+<Directory /var/www/html>
+    Options -Indexes +FollowSymLinks
+    AllowOverride FileInfo AuthConfig
+    Require all granted
+</Directory>
+
+# 保护敏感文件
+<FilesMatch "^\.ht|\.git|\.svn|\.env|composer\.(json|lock)|package\.json">
+    Require all denied
+</FilesMatch>
+
+# 限制HTTP方法
+<LimitExcept GET POST HEAD>
+    Require all denied
+</LimitExcept>
+
+# 防止目录遍历
+<DirectoryMatch "^/.*/\.">
+    Require all denied
+</DirectoryMatch>
+```
+
+---
+
+#### 10. 故障排查配置参数
+
+```apache
+# ====== 调试日志级别 ======
+
+# 生产环境
+LogLevel warn
+
+# 开发/调试环境
+LogLevel info ssl:warn rewrite:trace3
+
+# 详细调试（会产生大量日志）
+LogLevel debug
+
+# ====== 核心转储（崩溃调试）======
+
+# 在envvars中启用
+# ulimit -c unlimited
+# CoreDumpDirectory /tmp
+
+# ====== 扩展状态 ======
+
+<IfModule mod_status.c>
+    <Location /server-status>
+        SetHandler server-status
+        Require local
+        # Require ip 192.168.1.0/24
+    </Location>
+    
+    # 启用扩展状态信息
+    ExtendedStatus On
+</IfModule>
+
+# ====== 服务器信息 ======
+
+<IfModule mod_info.c>
+    <Location /server-info>
+        SetHandler server-info
+        Require local
+    </Location>
+</IfModule>
+```
+
+**访问服务器状态：**
+```bash
+# 文本格式
+curl http://localhost/server-status
+
+# 自动刷新格式
+curl http://localhost/server-status?auto
+
+# 在浏览器中访问
+http://localhost/server-status
+```
+
+---
+
+#### 11. 配置文件验证与测试
+
+```bash
+# ====== 语法检查 ======
+
+# 测试配置文件语法
+sudo apache2ctl configtest
+sudo apache2ctl -t
+
+# 显示解析后的配置
+sudo apache2ctl -S
+
+# ====== 配置转储 ======
+
+# 转储虚拟主机配置
+sudo apache2ctl -t -D DUMP_VHOSTS
+
+# 转储运行时配置
+sudo apache2ctl -t -D DUMP_RUN_CFG
+
+# 转储包含的文件
+sudo apache2ctl -t -D DUMP_INCLUDES
+
+# 转储加载的模块
+sudo apache2ctl -M
+
+# ====== 配置信息 ======
+
+# 显示编译选项
+apache2ctl -V
+
+# 显示内建模块
+apache2ctl -l
+
+# 查找配置文件位置
+apache2ctl -V | grep SERVER_CONFIG_FILE
+```
+
+---
+
+#### 12. 配置文件最佳实践
+
+##### 12.1 配置文件组织建议
+
+```bash
+/etc/apache2/
+├── apache2.conf          # 仅包含全局核心配置
+├── ports.conf            # 仅包含端口配置
+├── sites-available/      # 虚拟主机配置（完整配置）
+│   ├── example.com.conf
+│   └── test.local.conf
+├── sites-enabled/        # 符号链接到已启用的站点
+├── conf-available/       # 自定义配置片段
+│   ├── security.conf
+│   └── performance.conf
+└── conf-enabled/         # 符号链接到已启用的配置
+```
+
+##### 12.2 配置文件命名规范
+
+```bash
+# 虚拟主机配置文件命名
+001-mainsite.conf        # 使用数字前缀控制加载顺序
+010-example.com.conf     # 主域名
+020-test.local.conf      # 测试站点
+
+# 配置片段命名
+security.conf            # 安全配置
+performance.conf         # 性能配置
+custom-errors.conf       # 自定义错误页面
+```
+
+##### 12.3 配置文件注释规范
+
+```apache
+# ============================================
+# 虚拟主机：example.com
+# 用途：生产环境主站
+# 创建：2024-01-15
+# 修改：2024-11-05
+# ============================================
+
+<VirtualHost *:80>
+    # ------ 基本配置 ------
+    ServerName example.com
+    DocumentRoot /var/www/example
+    
+    # ------ 日志配置 ------
+    ErrorLog ${APACHE_LOG_DIR}/example-error.log
+    CustomLog ${APACHE_LOG_DIR}/example-access.log combined
+    
+    # ------ 安全配置 ------
+    # 禁用目录列表
+    <Directory /var/www/example>
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+    
+    # TODO: 添加SSL配置
+    # FIXME: 优化缓存策略
+</VirtualHost>
+```
+
+##### 12.4 配置版本控制
+
+```bash
+# 初始化Git仓库
+cd /etc/apache2
+sudo git init
+sudo git add .
+sudo git commit -m "Initial Apache configuration"
+
+# 修改配置后提交
+sudo nano sites-available/example.com.conf
+sudo git add sites-available/example.com.conf
+sudo git commit -m "Updated example.com: added SSL configuration"
+
+# 回滚配置
+sudo git log --oneline
+sudo git checkout <commit-hash> -- sites-available/example.com.conf
+sudo systemctl reload apache2
+```
+
+##### 12.5 配置备份脚本
+
+```bash
+#!/bin/bash
+# /usr/local/bin/backup-apache-config.sh
+
+BACKUP_DIR="/backup/apache"
+DATE=$(date +%Y%m%d-%H%M%S)
+
+mkdir -p $BACKUP_DIR
+
+# 备份配置
+tar -czf $BACKUP_DIR/apache-config-$DATE.tar.gz \
+    /etc/apache2/ \
+    /etc/ssl/certs/ \
+    /etc/ssl/private/
+
+# 保留最近30天的备份
+find $BACKUP_DIR -name "apache-config-*.tar.gz" -mtime +30 -delete
+
+echo "Backup completed: $BACKUP_DIR/apache-config-$DATE.tar.gz"
+```
+
+---
+
+#### 13. 常见配置错误与解决
+
+#### 错误1：配置语法错误
+```
+AH00526: Syntax error on line 42 of /etc/apache2/sites-enabled/example.com.conf:
+Invalid command 'SeverName', perhaps misspelled
+```
+**解决：** 检查拼写，应为 `ServerName`
+
+#### 错误2：模块未加载
+```
+Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included
+```
+**解决：**
+```bash
+sudo a2enmod rewrite
+sudo systemctl restart apache2
+```
+
+#### 错误3：端口冲突
+```
+(98)Address already in use: AH00072: make_sock: could not bind to address [::]:80
+```
+**解决：**
+```bash
+# 查找占用端口的进程
+sudo netstat -tlnp | grep :80
+sudo fuser -k 80/tcp
+```
+
+#### 错误4：权限问题
+```
+AH01630: client denied by server configuration
+```
+**解决：** 检查 `Require` 指令和目录权限
+```apache
+<Directory /var/www/html>
+    Require all granted
+</Directory>
+```
+
+---
+
