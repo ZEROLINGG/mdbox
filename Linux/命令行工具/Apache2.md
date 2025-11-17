@@ -1828,9 +1828,9 @@ find $BACKUP_DIR -name "*.tar.gz" -mtime +30 -delete
 echo "Backup completed: $BACKUP_DIR/$BACKUP_FILE"
 ```
 
-### 十四、配置文件详细讲解
+## 十四、配置文件详细讲解
 
-#### 1. apache2.conf - 主配置文件
+### 1. apache2.conf - 主配置文件
 
 Apache的核心配置文件，控制全局行为和默认设置。
 
@@ -2028,7 +2028,7 @@ IncludeOptional sites-enabled/*.conf
 
 ---
 
-#### 2. ports.conf - 端口配置文件
+### 2. ports.conf - 端口配置文件
 
 控制Apache监听的端口。
 
@@ -2063,7 +2063,7 @@ Listen 80
 
 ---
 
-#### 3. envvars - 环境变量文件
+### 3. envvars - 环境变量文件
 
 定义Apache运行时使用的环境变量。
 
@@ -2099,9 +2099,9 @@ export LANG=C
 
 ---
 
-#### 4. 虚拟主机配置文件详解
+### 4. 虚拟主机配置文件详解
 
-#### 4.1 000-default.conf - 默认HTTP站点
+### 4.1 000-default.conf - 默认HTTP站点
 
 ```apache
 <VirtualHost *:80>
@@ -2359,7 +2359,7 @@ export LANG=C
 
 ---
 
-#### 5. 模块配置文件详解
+### 5. 模块配置文件详解
 
 ##### 5.1 mod_rewrite.conf - URL重写模块
 
@@ -2523,7 +2523,7 @@ export LANG=C
 
 ---
 
-#### 6. .htaccess文件详解
+### 6. .htaccess文件详解
 
 `.htaccess`是目录级配置文件，允许在不重启Apache的情况下更改配置。
 
@@ -2667,7 +2667,7 @@ Header unset ETag
 
 ---
 
-#### 7. MPM配置文件详解
+### 7. MPM配置文件详解
 
 多处理模块（Multi-Processing Module）控制Apache如何处理并发请求。
 
@@ -2865,9 +2865,9 @@ sudo systemctl restart apache2
 
 ---
 
-#### 8. 性能调优参数总结
+### 8. 性能调优参数总结
 
-#### 8.1 全局性能参数（apache2.conf）
+### 8.1 全局性能参数（apache2.conf）
 
 ```apache
 # ====== 连接管理 ======
@@ -2945,7 +2945,7 @@ MaxConnectionsPerChild   10000
 
 ---
 
-#### 9. 安全配置参数详解
+### 9. 安全配置参数详解
 
 ##### 9.1 服务器标识（apache2.conf或security.conf）
 
@@ -3001,7 +3001,7 @@ TraceEnable Off
 
 ---
 
-#### 10. 故障排查配置参数
+### 10. 故障排查配置参数
 
 ```apache
 # ====== 调试日志级别 ======
@@ -3058,7 +3058,7 @@ http://localhost/server-status
 
 ---
 
-#### 11. 配置文件验证与测试
+### 11. 配置文件验证与测试
 
 ```bash
 # ====== 语法检查 ======
@@ -3098,7 +3098,7 @@ apache2ctl -V | grep SERVER_CONFIG_FILE
 
 ---
 
-#### 12. 配置文件最佳实践
+### 12. 配置文件最佳实践
 
 ##### 12.1 配置文件组织建议
 
@@ -3207,16 +3207,16 @@ echo "Backup completed: $BACKUP_DIR/apache-config-$DATE.tar.gz"
 
 ---
 
-#### 13. 常见配置错误与解决
+### 13. 常见配置错误与解决
 
-#### 错误1：配置语法错误
+### 错误1：配置语法错误
 ```
 AH00526: Syntax error on line 42 of /etc/apache2/sites-enabled/example.com.conf:
 Invalid command 'SeverName', perhaps misspelled
 ```
 **解决：** 检查拼写，应为 `ServerName`
 
-#### 错误2：模块未加载
+### 错误2：模块未加载
 ```
 Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included
 ```
@@ -3226,7 +3226,7 @@ sudo a2enmod rewrite
 sudo systemctl restart apache2
 ```
 
-#### 错误3：端口冲突
+### 错误3：端口冲突
 ```
 (98)Address already in use: AH00072: make_sock: could not bind to address [::]:80
 ```
@@ -3237,7 +3237,7 @@ sudo netstat -tlnp | grep :80
 sudo fuser -k 80/tcp
 ```
 
-#### 错误4：权限问题
+### 错误4：权限问题
 ```
 AH01630: client denied by server configuration
 ```
