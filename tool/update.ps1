@@ -5,7 +5,7 @@ param(
 $MDBOX_PATH = "E:\learn\mdbox"
 
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
-& ".\build.bat"
+& "$MDBOX_PATH\tool\build.bat"
 
 # 输出开始推送信息
 Write-Host "`n开始推送到远程仓库`n" -ForegroundColor DarkGreen
