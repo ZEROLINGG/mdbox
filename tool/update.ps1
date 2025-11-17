@@ -1,6 +1,8 @@
+param(
+    [string]$m
+)
 
 $MDBOX_PATH = "E:\learn\mdbox"
-
 
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
 & ".\build.bat"
@@ -14,9 +16,14 @@ Set-Location $MDBOX_PATH
 # 获取当前时间格式
 $now = Get-Date -Format 'yyyy.MMdd_HH:mm'
 
+# 根据是否收到 -m 参数生成提交信息
+if ($m) {
+    $commitMsg = "Update[$m][$now]"
+} else {
+    $commitMsg = "Update[$now]"
+}
+
 # 执行 Git 操作
 git add .
-git commit -m "Update[$now]"
+git commit -m "$commitMsg"
 git push
-
-
