@@ -6,6 +6,18 @@
       <description>Last 10 notes on Quartz 4</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Linux文件权限和管理</title>
+    <link>https://quartz.jzhao.xyz/Linux/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/Linux%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E5%92%8C%E7%AE%A1%E7%90%86</link>
+    <guid>https://quartz.jzhao.xyz/Linux/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/Linux%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E5%92%8C%E7%AE%A1%E7%90%86</guid>
+    <description><![CDATA[ Linux文件和目录权限完整指南 一、权限基础概念 1. 三种用户类型 Owner (u) - 文件所有者 Group (g) - 所属组 Others (o) - 其他用户 2. ]]></description>
+    <pubDate>Wed, 19 Nov 2025 04:54:09 GMT</pubDate>
+  </item><item>
+    <title>hashcat</title>
+    <link>https://quartz.jzhao.xyz/Linux/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/hashcat</link>
+    <guid>https://quartz.jzhao.xyz/Linux/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/hashcat</guid>
+    <description><![CDATA[ Hashcat 完整详细使用指南 一、基本介绍 Hashcat 是世界上最快的密码恢复工具，支持 CPU 和 GPU 加速。 特点 支持 300+ 种哈希算法 多平台支持（Windows/Linux/macOS） 支持分布式破解 高度优化的内核 支持实时进度保存和恢复 二、基本语法 hashcat [选项] 哈希文件 [字典文件/掩码] # 自动识别hash hashcat hash.txt wordlist.txt hashcat -m 0 -a 0 hash.txt wordlist.txt 三、攻击模式详解 1. ]]></description>
+    <pubDate>Wed, 19 Nov 2025 02:32:08 GMT</pubDate>
+  </item><item>
     <title>Linux 用户管理</title>
     <link>https://quartz.jzhao.xyz/Linux/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/Linux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86</link>
     <guid>https://quartz.jzhao.xyz/Linux/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/Linux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86</guid>
@@ -52,18 +64,6 @@
     <link>https://quartz.jzhao.xyz/Linux/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/SQLMap</link>
     <guid>https://quartz.jzhao.xyz/Linux/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/SQLMap</guid>
     <description><![CDATA[ SQLMap 完整使用手册 一、基础入门 1.1 SQLMap 概述 工具介绍与特性 开源的自动化 SQL 注入检测工具 支持 6 种 SQL 注入技术 强大的检测引擎和数据库接管功能 跨平台支持（Windows/Linux/macOS） 支持的数据库类型 MySQL, Oracle, PostgreSQL, Microsoft SQL Server SQLite, Microsoft Access, Firebird Sybase, SAP MaxDB, IBM DB2 HSQLDB, H2, Informix 等 工作原理与流程 发送测试 payload 到目标参数 分析响应判断是否存在注... ]]></description>
-    <pubDate>Mon, 10 Nov 2025 12:00:11 GMT</pubDate>
-  </item><item>
-    <title>ss (Socket Statistics)</title>
-    <link>https://quartz.jzhao.xyz/Linux/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/ss-(Socket-Statistics)</link>
-    <guid>https://quartz.jzhao.xyz/Linux/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/ss-(Socket-Statistics)</guid>
-    <description><![CDATA[ Linux ss 命令详解 一、命令概述 ss（Socket Statistics）是一个用于查看网络套接字（socket）信息的强大工具，是传统netstat命令的现代替代品。 主要优势 速度更快：特别是在连接数很多时 信息更详细：显示更多TCP和状态信息 功能更强大：支持更多的过滤选项 二、基本语法 ss [选项] [过滤器] 三、常用选项详解 3.1 基础选项 选项说明示例-n不解析服务名称，显示数字ss -n-a显示所有套接字ss -a-l显示监听状态的套接字ss -l-p显示使用套接字的进程ss -p-s显示套接字统计摘要ss -s-e显示详细的套接字信息ss -e-m显示套接字的内... ]]></description>
-    <pubDate>Mon, 10 Nov 2025 12:00:11 GMT</pubDate>
-  </item><item>
-    <title>index</title>
-    <link>https://quartz.jzhao.xyz/c++/</link>
-    <guid>https://quartz.jzhao.xyz/c++/</guid>
-    <description><![CDATA[ C++ 系统学习目录 一、基础入门 1. C++概述与环境搭建 C++的历史与特点 编译器安装（GCC、Clang、MSVC） IDE选择与配置（Visual Studio、Code::Blocks、CLion、VS Code） 第一个C++程序 编译与链接过程 调试技巧与工具 2. ]]></description>
     <pubDate>Mon, 10 Nov 2025 12:00:11 GMT</pubDate>
   </item>
     </channel>

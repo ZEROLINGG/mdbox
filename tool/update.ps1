@@ -1,5 +1,5 @@
 param(
-    [string]$m
+    [string[]]$m
 )
 
 $MDBOX_PATH = "E:\learn\mdbox"
@@ -18,7 +18,8 @@ $now = Get-Date -Format 'yyyy.MMdd_HH:mm'
 
 # 根据是否收到 -m 参数生成提交信息
 if ($m) {
-    $commitMsg = "Update[$m][$now]"
+    $msgText = $m -join ' '
+    $commitMsg = "Update[$msgText][$now]"
 } else {
     $commitMsg = "Update[$now]"
 }

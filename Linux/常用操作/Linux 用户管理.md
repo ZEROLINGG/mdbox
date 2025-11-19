@@ -83,7 +83,7 @@ john:x:1000:1000:John Doe,Office 101,555-1234:/home/john:/bin/bash
 3. UID
 4. 主组GID
 5. 注释字段（GECOS，可包含全名、办公室、电话等）
-6. 家目录路径
+6. home目录路径
 7. 登录Shell
 
 ```bash
@@ -112,7 +112,7 @@ john:$6$random$hashedpassword:19000:0:99999:7:30:19500:
 
 **字段说明：**
 1. 用户名
-2. 加密密码（$id$salt$hashed格式）
+2. 加密密码（\$id\$salt$hashed格式）
    - $1$ = MD5
    - $5$ = SHA-256
    - $6$ = SHA-512
