@@ -6,23 +6,29 @@
       <description>Last 10 notes on Quartz 4</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>apiohttp</title>
-    <link>https://quartz.jzhao.xyz/python/2.%E5%B8%B8%E7%94%A8%E5%BA%93%E4%B8%8E%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/%E7%BD%91%E7%BB%9C/apiohttp</link>
-    <guid>https://quartz.jzhao.xyz/python/2.%E5%B8%B8%E7%94%A8%E5%BA%93%E4%B8%8E%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/%E7%BD%91%E7%BB%9C/apiohttp</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 21 Nov 2025 01:40:51 GMT</pubDate>
+    <title>libcurl --多协议网络客户端库</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%B8%B8%E7%94%A8%E5%BA%93/libcurl---%E5%A4%9A%E5%8D%8F%E8%AE%AE%E7%BD%91%E7%BB%9C%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%93</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%B8%B8%E7%94%A8%E5%BA%93/libcurl---%E5%A4%9A%E5%8D%8F%E8%AE%AE%E7%BD%91%E7%BB%9C%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%93</guid>
+    <description><![CDATA[ C++ libcurl 详细使用教程 一、libcurl 简介 libcurl 支持多种协议（HTTP、HTTPS、FTP、SMTP等），是进行网络编程的强大工具。 二、安装配置 Linux # Ubuntu/Debian sudo apt-get install libcurl4-openssl-dev # CentOS/RedHat sudo yum install libcurl-devel Windows 下载预编译库或使用 vcpkg： vcpkg install curl 编译链接 g++ main.cpp -lcurl -o main 三、基本使用流程 1. ]]></description>
+    <pubDate>Sun, 23 Nov 2025 08:16:35 GMT</pubDate>
   </item><item>
-    <title>未命名</title>
-    <link>https://quartz.jzhao.xyz/c++/windows-api/%E6%9C%AA%E5%91%BD%E5%90%8D</link>
-    <guid>https://quartz.jzhao.xyz/c++/windows-api/%E6%9C%AA%E5%91%BD%E5%90%8D</guid>
-    <description><![CDATA[ Win32 剪贴板 一、核心概念（剪贴板在 Win32 里的本质） 1. ]]></description>
-    <pubDate>Fri, 21 Nov 2025 01:14:36 GMT</pubDate>
+    <title>Win32 剪贴板</title>
+    <link>https://quartz.jzhao.xyz/c++/windows-api/Win32-%E5%89%AA%E8%B4%B4%E6%9D%BF</link>
+    <guid>https://quartz.jzhao.xyz/c++/windows-api/Win32-%E5%89%AA%E8%B4%B4%E6%9D%BF</guid>
+    <description><![CDATA[ 一、核心概念（剪贴板在 Win32 里的本质） 1. ]]></description>
+    <pubDate>Fri, 21 Nov 2025 10:00:04 GMT</pubDate>
   </item><item>
     <title>文件操作</title>
     <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C</link>
     <guid>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C</guid>
     <description><![CDATA[ C++文件操作详细讲解（完善版） 一、C++风格文件操作（iostream库） 1.1 基础知识 #include &lt;fstream&gt; // 文件流 #include &lt;iostream&gt; // 标准输入输出 #include &lt;string&gt; #include &lt;sstream&gt; // 字符串流 // 三个主要类： // ifstream - 输入文件流（读取） // ofstream - 输出文件流（写入） // fstream - 输入输出文件流（读写） 流的继承关系： ios 是所有流的基类，定义基本的流操作 istream 继承自 io... ]]></description>
-    <pubDate>Wed, 19 Nov 2025 12:09:11 GMT</pubDate>
+    <pubDate>Fri, 21 Nov 2025 03:34:20 GMT</pubDate>
+  </item><item>
+    <title>apiohttp</title>
+    <link>https://quartz.jzhao.xyz/python/2.%E5%B8%B8%E7%94%A8%E5%BA%93%E4%B8%8E%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/%E7%BD%91%E7%BB%9C/apiohttp</link>
+    <guid>https://quartz.jzhao.xyz/python/2.%E5%B8%B8%E7%94%A8%E5%BA%93%E4%B8%8E%E5%B7%A5%E5%85%B7/%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/%E7%BD%91%E7%BB%9C/apiohttp</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Fri, 21 Nov 2025 03:34:20 GMT</pubDate>
   </item><item>
     <title>Linux文件权限和管理</title>
     <link>https://quartz.jzhao.xyz/Linux/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/Linux%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E5%92%8C%E7%AE%A1%E7%90%86</link>
@@ -58,12 +64,6 @@
     <link>https://quartz.jzhao.xyz/Linux/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/Apache2</link>
     <guid>https://quartz.jzhao.xyz/Linux/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/Apache2</guid>
     <description><![CDATA[ Kali Linux中Apache完整使用指南 一、Apache简介与用途 在Kali Linux中的应用场景 渗透测试环境搭建 - 模拟真实Web服务器环境 Web应用安全测试 - 测试SQL注入、XSS等漏洞 钓鱼页面测试（仅限授权测试） - 社会工程学演练 托管安全工具和脚本 - 部署BeEF、Metasploit Payloads等 搭建本地测试环境 - DVWA、WebGoat等靶场 反向代理和流量分析 - 拦截和分析HTTP/HTTPS流量 文件传输服务器 - 在内网渗透中快速传输文件 二、安装与基础配置 1. ]]></description>
-    <pubDate>Mon, 17 Nov 2025 01:23:25 GMT</pubDate>
-  </item><item>
-    <title>httpd</title>
-    <link>https://quartz.jzhao.xyz/Linux/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/httpd</link>
-    <guid>https://quartz.jzhao.xyz/Linux/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/httpd</guid>
-    <description><![CDATA[ openEuler中httpd完整使用指南 一、httpd简介与用途 在openEuler中的应用场景 企业Web服务器 - 部署企业门户、内部系统 开发测试环境 - 搭建本地开发和测试平台 反向代理服务 - 作为负载均衡器和代理服务器 静态资源服务 - CDN节点、文件下载服务器 API网关 - 微服务架构中的API接入层 容器化部署 - 配合Docker/Kubernetes使用 高可用集群 - 配合Keepalived/HAProxy实现HA 二、安装与基础配置 1. ]]></description>
     <pubDate>Mon, 17 Nov 2025 01:23:25 GMT</pubDate>
   </item>
     </channel>
