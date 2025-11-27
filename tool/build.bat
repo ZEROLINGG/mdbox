@@ -9,7 +9,7 @@ setlocal
 :: 1. Markdown 笔记库 (mdbox) 的根目录
 set "MDBOX_PATH=E:\learn\mdbox"
 :: 2. Quartz 项目的根目录
-set "QUARTZ_PATH=E:\class\git\quartz"
+set "QUARTZ_PATH=E:\Project\git\quartz"
 :: 3. 需要从构建中排除的文件夹列表 (用空格分隔)
 set "EXCLUDE_FOLDERS=.idea .obsidian tool 其他"
 set "EXCLUDE_FILES=.gitignore"

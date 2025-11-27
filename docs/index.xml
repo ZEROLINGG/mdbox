@@ -6,17 +6,23 @@
       <description>Last 10 notes on Quartz 4</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>libcurl --多协议网络客户端库</title>
-    <link>https://quartz.jzhao.xyz/c++/%E5%B8%B8%E7%94%A8%E5%BA%93/libcurl---%E5%A4%9A%E5%8D%8F%E8%AE%AE%E7%BD%91%E7%BB%9C%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%93</link>
-    <guid>https://quartz.jzhao.xyz/c++/%E5%B8%B8%E7%94%A8%E5%BA%93/libcurl---%E5%A4%9A%E5%8D%8F%E8%AE%AE%E7%BD%91%E7%BB%9C%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%93</guid>
-    <description><![CDATA[ C++ libcurl 详细使用教程 一、libcurl 简介 libcurl 支持多种协议（HTTP、HTTPS、FTP、SMTP等），是进行网络编程的强大工具。 二、安装配置 Linux # Ubuntu/Debian sudo apt-get install libcurl4-openssl-dev # CentOS/RedHat sudo yum install libcurl-devel Windows 下载预编译库或使用 vcpkg： vcpkg install curl 编译链接 g++ main.cpp -lcurl -o main 三、基本使用流程 1. ]]></description>
-    <pubDate>Sun, 23 Nov 2025 08:16:35 GMT</pubDate>
-  </item><item>
     <title>Win32 剪贴板</title>
     <link>https://quartz.jzhao.xyz/c++/windows-api/Win32-%E5%89%AA%E8%B4%B4%E6%9D%BF</link>
     <guid>https://quartz.jzhao.xyz/c++/windows-api/Win32-%E5%89%AA%E8%B4%B4%E6%9D%BF</guid>
     <description><![CDATA[ 一、核心概念（剪贴板在 Win32 里的本质） 1. ]]></description>
-    <pubDate>Fri, 21 Nov 2025 10:00:04 GMT</pubDate>
+    <pubDate>Mon, 24 Nov 2025 23:29:17 GMT</pubDate>
+  </item><item>
+    <title>libcurl --多协议网络客户端库</title>
+    <link>https://quartz.jzhao.xyz/c++/%E5%B8%B8%E7%94%A8%E5%BA%93/libcurl---%E5%A4%9A%E5%8D%8F%E8%AE%AE%E7%BD%91%E7%BB%9C%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%93</link>
+    <guid>https://quartz.jzhao.xyz/c++/%E5%B8%B8%E7%94%A8%E5%BA%93/libcurl---%E5%A4%9A%E5%8D%8F%E8%AE%AE%E7%BD%91%E7%BB%9C%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%93</guid>
+    <description><![CDATA[ C++ libcurl 详细使用教程 一、libcurl 简介 libcurl 支持多种协议（HTTP、HTTPS、FTP、SMTP等），是进行网络编程的强大工具。 二、安装配置 Linux # Ubuntu/Debian sudo apt-get install libcurl4-openssl-dev # CentOS/RedHat sudo yum install libcurl-devel Windows 下载预编译库或使用 vcpkg： vcpkg install curl 编译链接 g++ main.cpp -lcurl -o main 三、基本使用流程 1. ]]></description>
+    <pubDate>Mon, 24 Nov 2025 23:29:17 GMT</pubDate>
+  </item><item>
+    <title>signal 模块</title>
+    <link>https://quartz.jzhao.xyz/python/2.%E5%B8%B8%E7%94%A8%E5%BA%93%E4%B8%8E%E5%B7%A5%E5%85%B7/%E6%A0%87%E5%87%86%E5%BA%93%E4%B8%8E%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3/signal-%E6%A8%A1%E5%9D%97</link>
+    <guid>https://quartz.jzhao.xyz/python/2.%E5%B8%B8%E7%94%A8%E5%BA%93%E4%B8%8E%E5%B7%A5%E5%85%B7/%E6%A0%87%E5%87%86%E5%BA%93%E4%B8%8E%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3/signal-%E6%A8%A1%E5%9D%97</guid>
+    <description><![CDATA[ signal 模块是 Python 提供的一个用于处理异步事件的标准模块，主要用于设置信号处理器（signal handler），使程序能在收到系统信号时做出自定义响应。常用于处理诸如 Ctrl+C 中断、子进程退出、定时器等。 一、信号（Signal）简介 信号是操作系统用于通知进程发生了异步事件的一种机制。常见的信号包括： 信号名数值含义SIGINT2用户中断（通常是 Ctrl+C）SIGTERM15请求终止程序（kill 默认）SIGKILL9强制终止程序（不可捕获）SIGALRM14定时器信号SIGHUP1终端关闭SIGCHLD17子进程退出 二、signal 模块常用函数 1. ]]></description>
+    <pubDate>Mon, 24 Nov 2025 23:29:17 GMT</pubDate>
   </item><item>
     <title>文件操作</title>
     <link>https://quartz.jzhao.xyz/c++/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C</link>
@@ -58,12 +64,6 @@
     <link>https://quartz.jzhao.xyz/CTF/Misc%E6%9D%82%E9%A1%B9/%E5%85%B6%E4%BB%96/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F</link>
     <guid>https://quartz.jzhao.xyz/CTF/Misc%E6%9D%82%E9%A1%B9/%E5%85%B6%E4%BB%96/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F</guid>
     <description><![CDATA[ 正则表达式详细讲解 一、正则表达式基础概念 1.1 什么是正则表达式 正则表达式（Regular Expression，简称 RegEx）是一种用于匹配字符串模式的强大工具。它使用特殊的语法来描述字符串的匹配规则。 1.2 基本组成 // 正则表达式的两种创建方式 const regex1 = /pattern/flags; // 字面量方式 const regex2 = new RegExp(&#039;pattern&#039;, &#039;flags&#039;); // 构造函数方式 二、元字符详解 2.1 基础元字符 元字符描述示例.匹配除换行符外的任意字符/a.c/ 匹配 “ab... ]]></description>
-    <pubDate>Mon, 17 Nov 2025 01:23:25 GMT</pubDate>
-  </item><item>
-    <title>Apache2</title>
-    <link>https://quartz.jzhao.xyz/Linux/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/Apache2</link>
-    <guid>https://quartz.jzhao.xyz/Linux/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/Apache2</guid>
-    <description><![CDATA[ Kali Linux中Apache完整使用指南 一、Apache简介与用途 在Kali Linux中的应用场景 渗透测试环境搭建 - 模拟真实Web服务器环境 Web应用安全测试 - 测试SQL注入、XSS等漏洞 钓鱼页面测试（仅限授权测试） - 社会工程学演练 托管安全工具和脚本 - 部署BeEF、Metasploit Payloads等 搭建本地测试环境 - DVWA、WebGoat等靶场 反向代理和流量分析 - 拦截和分析HTTP/HTTPS流量 文件传输服务器 - 在内网渗透中快速传输文件 二、安装与基础配置 1. ]]></description>
     <pubDate>Mon, 17 Nov 2025 01:23:25 GMT</pubDate>
   </item>
     </channel>
